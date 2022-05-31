@@ -6,6 +6,8 @@
 //
 
 #import "myClass.h"
+#define MAX_CACHE_LINE 10
+
 //@implementation MyClass
 //- (void) Sort: (int*) nums numsSize: (int) size {
 //    for (_i = 1; _i < size; _i++) {
@@ -269,9 +271,219 @@
 //}
 //@end
 
-@implementation NSNumber (fk)
-- (NSInteger) addNumber:(NSNumber*) num {
-    int sum = [self intValue] + [num intValue];
-    return sum;
-}
-@end
+//@implementation NSNumber (fk)
+//- (NSNumber*) add:(double) num2 {
+//    return [NSNumber numberWithDouble: ([self doubleValue] + num2)];
+//}
+//@end
+
+//@implementation myClass
+//- (void) info {
+//    NSLog(@"这是一个普通的方法");
+//}
+//- (void) conceal {
+//    NSLog(@"这是一个隐藏的方法");
+//}
+//@end
+
+//@implementation FKCar
+//- (void) drive:(NSString*) name {
+//    NSLog(@"%@正在驾驶%@", name, self.brand);
+//}
+//- (NSString*) description {
+//    return [NSString stringWithFormat:@"<FKCar[brand = %@, model = %@, color = %@]>", self.brand, self.model, self.color];
+//}
+//@end
+
+//@implementation FKApple
+//- (void) taste {
+//    NSLog(@"这个苹果是甜的");
+//}
+//@end
+
+//@implementation FKPrinter {
+//    NSString* printData[MAX_CACHE_LINE];
+//    int dataNum;
+//}
+//- (void) output {
+//    while (dataNum > 0) {
+//        NSLog(@"打印机使用%@打印%@", self.printColor, printData[0]);
+//        dataNum--;
+//        for (int i = 0; i < dataNum; i++) {
+//            printData[i] = printData[i + 1];
+//        }
+//    }
+//}
+//- (void) addData:(NSString*) msg {
+//    if (dataNum > MAX_CACHE_LINE) {
+//        NSLog(@"输出队列已满!");
+//    } else {
+//        printData[dataNum++] = msg;
+//    }
+//}
+//- (NSDate*) getProduceTime {
+//    return [[NSDate alloc] init];
+//}
+//- (NSString*) printColor {
+//    return @"红色";
+//}
+//@end
+
+//#if __LP64__ || (TARGET_OS_EMBEDDED && !TARGET_OS_IPHONE) || TARGET_OS_WIN32 || NS_BUILD_32_LIKE_64
+//typedef long NSInteger;
+//typedef unsigned long NSUInteger;
+//#else
+//typedef int NSInteger;
+//typedef unsigned int NSUInteger;
+//#endif
+//
+//#if defined(__LP64__) && __LP64__
+//# define CGFLOAT_TYPE double
+//# define CGFLOAT_IS_DOUBLE 1
+//# define CGFLOAT_MIN DBL_MIN
+//# define CGFLOAT_MAX DBL_MAX
+//#else
+//# define CGFLOAT_TYPE float
+//# define CGFLOAT_IS_DOUBLE 0
+//# define CGFLOAT_MIN FLT_MIN
+//# define CGFLOAT_MAX FLT_MAX
+//#endif
+//
+///* Definition of the 'CGFloat' type and 'CGFLOAT_DEFINED'.*/
+//
+//typedef CGFLOAT_TYPE CGFLoat;
+//#define CGFLOAT_DEFINED 1
+//
+
+//@implementation FKApple
+//- (id) initWithColor:(NSString*) color andWeight:(double)weight {
+//    if (self = [super init]) {
+//        self.color = color;
+//        self.weight = weight;
+//    }
+//    return self;
+//}
+//- (NSString*) description {
+//    return [NSString stringWithFormat:@"<FKApple [_color = %@, _weight = %g]>", self.color, self.weight];
+//}
+//@end
+
+//@implementation Brid
+//- (id) initWithKind:(NSString *) kind andAge:(int) age {
+//    if (self = [super init]) {
+//        self.kind = kind;
+//        self.age = age;
+//    }
+//    return self;
+//}
+//- (BOOL) isEqual:(id) object {
+//    // 指的是同一个对象
+//    if (self == object) {
+//        return YES;
+//    } else {
+//        Brid* other = (Brid*)object;
+//        // 如果是同一种鸟则返回YES
+//        if (self.kind == other.kind) {
+//            return YES;
+//        } else {
+//            return NO;
+//        }
+//    }
+//}
+//@end
+
+// 为类别提供实现部分
+//@implementation NSNumber (fk)
+//- (NSNumber*) add:(double) num2 {
+//    return [NSNumber numberWithDouble:([self doubleValue] + num2)];
+//}
+//- (NSNumber*) substract:(double) num2 {
+//    return [NSNumber numberWithDouble:([self doubleValue] - num2)];
+//}
+//- (NSNumber*) multipy:(double) num2 {
+//    return [NSNumber numberWithDouble:([self doubleValue] * num2)];
+//}
+//- (NSNumber*) divide:(double) num2 {
+//    return [NSNumber numberWithDouble:([self doubleValue] / num2)];
+//}
+//@end
+
+//@implementation FKCar
+//- (void) info {
+//    NSLog(@"我是一个普通的方法");
+//}
+//// 定义私有方法
+//- (double) calDiscount:(double) discount {
+//    return self.price * discount;
+//}
+//@end
+
+//@implementation FKCar
+//- (void) drive {
+//    NSLog(@"%@正在路上行驶", self.brand);
+//}
+//- (void) drive:(NSString*) name {
+//    NSLog(@"%@正在驾驶着%@的%@在路上行驶", name, self.color, self.brand);
+//}
+//@end
+
+//@implementation FKApple
+//- (void) taste {
+//    NSLog(@"苹果营养丰富，口味很好！");
+//}
+//@end
+
+//@implementation fatherClass
+//
+//- (void) info {
+//    NSLog(@"aaaaaaa");
+//}
+//
+//- (void) model {
+//    NSLog(@"01");
+//}
+//
+//@end
+//
+//@implementation sonClass
+//- (void) text {
+//    NSLog(@"bbbbbb");
+//}
+//@end
+
+//@implementation elder
+//// 实现委托弟子打扫寺庙
+//- (void) cleanDelegate {
+//    // 调用delegate属性，即委托delegate对象实现cleanTemple方法
+//    [self.delegate cleanTemple];
+//}
+//@end
+//
+//@implementation disciplen
+//// 实现协议，即cleanTemple方法
+//- (void) cleanTemple {
+//    NSLog(@"弟子已经打扫了寺庙。");
+//}
+//@end
+
+//@implementation myClass
+//- (void) infoIn {
+//    NSLog(@"jbasiudsahb");
+//}
+//- (void) info {
+//    [self infoIn];
+//}
+//@end
+
+//@implementation myClass
+//- (void) info:(NSTimer*) timer {
+//    NSLog(@"第%d次执行该方法", self.count);
+//    self.count++;
+//    if (self.count > 10) {
+//        [timer invalidate];
+//    }
+//}
+//- (void) t {
+//    [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(info:) userInfo:nil repeats:YES];
+//}
+//@end
