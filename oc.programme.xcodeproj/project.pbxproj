@@ -11,6 +11,8 @@
 		8545BD122823C8C200F50D68 /* myClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8545BD112823C8C200F50D68 /* myClass.m */; };
 		856588BA282E76E20054DDFA /* ag.m in Sources */ = {isa = PBXBuildFile; fileRef = 856588B9282E76E20054DDFA /* ag.m */; };
 		856589512845F4A10054DDFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 856589502845F4A10054DDFA /* main.m */; };
+		8565895E2845F9790054DDFA /* FKDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8565895D2845F9790054DDFA /* FKDog.m */; };
+		85658961284798320054DDFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85658960284798320054DDFA /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,9 @@
 		8545BD112823C8C200F50D68 /* myClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myClass.m; sourceTree = "<group>"; };
 		856588B9282E76E20054DDFA /* ag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ag.m; sourceTree = "<group>"; };
 		856589502845F4A10054DDFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		8565895C2845F9790054DDFA /* FKDog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKDog.h; sourceTree = "<group>"; };
+		8565895D2845F9790054DDFA /* FKDog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKDog.m; sourceTree = "<group>"; };
+		85658960284798320054DDFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,7 @@
 		8545BD082823C22800F50D68 /* oc.programme */ = {
 			isa = PBXGroup;
 			children = (
+				8565895F284783B40054DDFA /* 集合 */,
 				8565894F2845F4520054DDFA /* copy与mutableCopy */,
 				8565894E2845F40A0054DDFA /* 学习源码 */,
 			);
@@ -86,8 +92,18 @@
 			isa = PBXGroup;
 			children = (
 				856589502845F4A10054DDFA /* main.m */,
+				8565895C2845F9790054DDFA /* FKDog.h */,
+				8565895D2845F9790054DDFA /* FKDog.m */,
 			);
 			path = "copy与mutableCopy";
+			sourceTree = "<group>";
+		};
+		8565895F284783B40054DDFA /* 集合 */ = {
+			isa = PBXGroup;
+			children = (
+				85658960284798320054DDFA /* main.m */,
+			);
+			path = "集合";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +164,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				856588BA282E76E20054DDFA /* ag.m in Sources */,
+				8565895E2845F9790054DDFA /* FKDog.m in Sources */,
 				8545BD122823C8C200F50D68 /* myClass.m in Sources */,
 				856589512845F4A10054DDFA /* main.m in Sources */,
+				85658961284798320054DDFA /* main.m in Sources */,
 				8545BD0A2823C22800F50D68 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
