@@ -13,6 +13,7 @@
 		856589512845F4A10054DDFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 856589502845F4A10054DDFA /* main.m */; };
 		8565895E2845F9790054DDFA /* FKDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8565895D2845F9790054DDFA /* FKDog.m */; };
 		85658961284798320054DDFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85658960284798320054DDFA /* main.m */; };
+		85D3D2E6284CEAE900CDDD09 /* FKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D3D2E5284CEAE900CDDD09 /* FKUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		8565895C2845F9790054DDFA /* FKDog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKDog.h; sourceTree = "<group>"; };
 		8565895D2845F9790054DDFA /* FKDog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKDog.m; sourceTree = "<group>"; };
 		85658960284798320054DDFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85D3D2E4284CEAE900CDDD09 /* FKUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKUser.h; sourceTree = "<group>"; };
+		85D3D2E5284CEAE900CDDD09 /* FKUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				85658960284798320054DDFA /* main.m */,
+				85D3D2E4284CEAE900CDDD09 /* FKUser.h */,
+				85D3D2E5284CEAE900CDDD09 /* FKUser.m */,
 			);
 			path = "集合";
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			files = (
 				856588BA282E76E20054DDFA /* ag.m in Sources */,
 				8565895E2845F9790054DDFA /* FKDog.m in Sources */,
+				85D3D2E6284CEAE900CDDD09 /* FKUser.m in Sources */,
 				8545BD122823C8C200F50D68 /* myClass.m in Sources */,
 				856589512845F4A10054DDFA /* main.m in Sources */,
 				85658961284798320054DDFA /* main.m in Sources */,
