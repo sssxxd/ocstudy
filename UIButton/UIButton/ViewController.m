@@ -89,17 +89,17 @@
     // P3：事件处理函数类型
     // UIControlEventTouchUpInside，按钮弹起时，手指在按钮范围内
     // UIControlEventTouchDown，当我们手指触碰到屏幕上时
-    // [btn addTarget:self
-    //         action:@selector(createXiaqiu)
-  // forControlEvents:UIControlEventTouchUpInside];
+     [btn addTarget:self
+             action:@selector(createXiaqiu)
+   forControlEvents:UIControlEventTouchUpInside];
     
-    [btn addTarget:self
-            action:@selector(pressBtn:)
-  forControlEvents:UIControlEventTouchUpInside];
-    
-    [btn addTarget:self
-            action:@selector(touchDown)
-  forControlEvents:UIControlEventTouchDown];
+//    [btn addTarget:self
+//            action:@selector(pressBtn:)
+//  forControlEvents:UIControlEventTouchUpInside];
+//
+//    [btn addTarget:self
+//            action:@selector(touchDown)
+//  forControlEvents:UIControlEventTouchDown];
     
     UIButton* btn02 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
@@ -108,9 +108,9 @@
     btn02.frame = CGRectMake(140, 300, 100, 40);
     
     // 是可以多个按钮使用一个事件函数
-    [btn02 addTarget:self
-            action:@selector(pressBtn:)
-  forControlEvents:UIControlEventTouchUpInside];
+//    [btn02 addTarget:self
+//            action:@selector(pressBtn:)
+//  forControlEvents:UIControlEventTouchUpInside];
     
     // 设置按钮标记值
     btn.tag = 101;
@@ -147,9 +147,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    // [self createUIRectButton];
+    [self createUIRectButton];
     
-    // [self createImageBtn];
+    [self createImageBtn];
     
     [self createBtn];
 }
