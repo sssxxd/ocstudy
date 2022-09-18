@@ -11,5 +11,7 @@
 
 @property (nonatomic, strong) UIView* redView;
 
+@property (nonatomic, strong) UIView* grayView;
+
 @end
 
