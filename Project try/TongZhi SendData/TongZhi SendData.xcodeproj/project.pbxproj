@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85888B6028D755ED00646B57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888B5F28D755ED00646B57 /* AppDelegate.m */; };
+		85888B6328D755ED00646B57 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888B6228D755ED00646B57 /* SceneDelegate.m */; };
+		85888B6628D755ED00646B57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888B6528D755ED00646B57 /* ViewController.m */; };
+		85888B6928D755ED00646B57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85888B6728D755ED00646B57 /* Main.storyboard */; };
+		85888B6B28D755EF00646B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85888B6A28D755EF00646B57 /* Assets.xcassets */; };
+		85888B6E28D755EF00646B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85888B6C28D755EF00646B57 /* LaunchScreen.storyboard */; };
+		85888B7128D755EF00646B57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888B7028D755EF00646B57 /* main.m */; };
+		85888B7B28D755F000646B57 /* TongZhi_SendDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888B7A28D755F000646B57 /* TongZhi_SendDataTests.m */; };
+		85888B8528D755F000646B57 /* TongZhi_SendDataUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888B8428D755F000646B57 /* TongZhi_SendDataUITests.m */; };
+		85888B8728D755F000646B57 /* TongZhi_SendDataUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888B8628D755F000646B57 /* TongZhi_SendDataUITestsLaunchTests.m */; };
+		85888B9528D7566600646B57 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888B9428D7566600646B57 /* SecondViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85888B7728D755F000646B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85888B5328D755ED00646B57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85888B5A28D755ED00646B57;
+			remoteInfo = "TongZhi SendData";
+		};
+		85888B8128D755F000646B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85888B5328D755ED00646B57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85888B5A28D755ED00646B57;
+			remoteInfo = "TongZhi SendData";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		85888B5B28D755ED00646B57 /* TongZhi SendData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TongZhi SendData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85888B5E28D755ED00646B57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		85888B5F28D755ED00646B57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		85888B6128D755ED00646B57 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		85888B6228D755ED00646B57 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		85888B6428D755ED00646B57 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		85888B6528D755ED00646B57 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		85888B6828D755ED00646B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85888B6A28D755EF00646B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85888B6D28D755EF00646B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85888B6F28D755EF00646B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85888B7028D755EF00646B57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85888B7628D755F000646B57 /* TongZhi SendDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TongZhi SendDataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85888B7A28D755F000646B57 /* TongZhi_SendDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TongZhi_SendDataTests.m; sourceTree = "<group>"; };
+		85888B8028D755F000646B57 /* TongZhi SendDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TongZhi SendDataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85888B8428D755F000646B57 /* TongZhi_SendDataUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TongZhi_SendDataUITests.m; sourceTree = "<group>"; };
+		85888B8628D755F000646B57 /* TongZhi_SendDataUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TongZhi_SendDataUITestsLaunchTests.m; sourceTree = "<group>"; };
+		85888B9328D7566600646B57 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		85888B9428D7566600646B57 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85888B5828D755ED00646B57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85888B7328D755F000646B57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85888B7D28D755F000646B57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85888B5228D755ED00646B57 = {
+			isa = PBXGroup;
+			children = (
+				85888B5D28D755ED00646B57 /* TongZhi SendData */,
+				85888B7928D755F000646B57 /* TongZhi SendDataTests */,
+				85888B8328D755F000646B57 /* TongZhi SendDataUITests */,
+				85888B5C28D755ED00646B57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85888B5C28D755ED00646B57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85888B5B28D755ED00646B57 /* TongZhi SendData.app */,
+				85888B7628D755F000646B57 /* TongZhi SendDataTests.xctest */,
+				85888B8028D755F000646B57 /* TongZhi SendDataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85888B5D28D755ED00646B57 /* TongZhi SendData */ = {
+			isa = PBXGroup;
+			children = (
+				85888B5E28D755ED00646B57 /* AppDelegate.h */,
+				85888B5F28D755ED00646B57 /* AppDelegate.m */,
+				85888B6128D755ED00646B57 /* SceneDelegate.h */,
+				85888B6228D755ED00646B57 /* SceneDelegate.m */,
+				85888B6428D755ED00646B57 /* ViewController.h */,
+				85888B6528D755ED00646B57 /* ViewController.m */,
+				85888B9328D7566600646B57 /* SecondViewController.h */,
+				85888B9428D7566600646B57 /* SecondViewController.m */,
+				85888B6728D755ED00646B57 /* Main.storyboard */,
+				85888B6A28D755EF00646B57 /* Assets.xcassets */,
+				85888B6C28D755EF00646B57 /* LaunchScreen.storyboard */,
+				85888B6F28D755EF00646B57 /* Info.plist */,
+				85888B7028D755EF00646B57 /* main.m */,
+			);
+			path = "TongZhi SendData";
+			sourceTree = "<group>";
+		};
+		85888B7928D755F000646B57 /* TongZhi SendDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				85888B7A28D755F000646B57 /* TongZhi_SendDataTests.m */,
+			);
+			path = "TongZhi SendDataTests";
+			sourceTree = "<group>";
+		};
+		85888B8328D755F000646B57 /* TongZhi SendDataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				85888B8428D755F000646B57 /* TongZhi_SendDataUITests.m */,
+				85888B8628D755F000646B57 /* TongZhi_SendDataUITestsLaunchTests.m */,
+			);
+			path = "TongZhi SendDataUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85888B5A28D755ED00646B57 /* TongZhi SendData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85888B8A28D755F000646B57 /* Build configuration list for PBXNativeTarget "TongZhi SendData" */;
+			buildPhases = (
+				85888B5728D755ED00646B57 /* Sources */,
+				85888B5828D755ED00646B57 /* Frameworks */,
+				85888B5928D755ED00646B57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TongZhi SendData";
+			productName = "TongZhi SendData";
+			productReference = 85888B5B28D755ED00646B57 /* TongZhi SendData.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85888B7528D755F000646B57 /* TongZhi SendDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85888B8D28D755F000646B57 /* Build configuration list for PBXNativeTarget "TongZhi SendDataTests" */;
+			buildPhases = (
+				85888B7228D755F000646B57 /* Sources */,
+				85888B7328D755F000646B57 /* Frameworks */,
+				85888B7428D755F000646B57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85888B7828D755F000646B57 /* PBXTargetDependency */,
+			);
+			name = "TongZhi SendDataTests";
+			productName = "TongZhi SendDataTests";
+			productReference = 85888B7628D755F000646B57 /* TongZhi SendDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		85888B7F28D755F000646B57 /* TongZhi SendDataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85888B9028D755F000646B57 /* Build configuration list for PBXNativeTarget "TongZhi SendDataUITests" */;
+			buildPhases = (
+				85888B7C28D755F000646B57 /* Sources */,
+				85888B7D28D755F000646B57 /* Frameworks */,
+				85888B7E28D755F000646B57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85888B8228D755F000646B57 /* PBXTargetDependency */,
+			);
+			name = "TongZhi SendDataUITests";
+			productName = "TongZhi SendDataUITests";
+			productReference = 85888B8028D755F000646B57 /* TongZhi SendDataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85888B5328D755ED00646B57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					85888B5A28D755ED00646B57 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					85888B7528D755F000646B57 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 85888B5A28D755ED00646B57;
+					};
+					85888B7F28D755F000646B57 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 85888B5A28D755ED00646B57;
+					};
+				};
+			};
+			buildConfigurationList = 85888B5628D755ED00646B57 /* Build configuration list for PBXProject "TongZhi SendData" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85888B5228D755ED00646B57;
+			productRefGroup = 85888B5C28D755ED00646B57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85888B5A28D755ED00646B57 /* TongZhi SendData */,
+				85888B7528D755F000646B57 /* TongZhi SendDataTests */,
+				85888B7F28D755F000646B57 /* TongZhi SendDataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85888B5928D755ED00646B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85888B6E28D755EF00646B57 /* LaunchScreen.storyboard in Resources */,
+				85888B6B28D755EF00646B57 /* Assets.xcassets in Resources */,
+				85888B6928D755ED00646B57 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85888B7428D755F000646B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85888B7E28D755F000646B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85888B5728D755ED00646B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85888B9528D7566600646B57 /* SecondViewController.m in Sources */,
+				85888B6628D755ED00646B57 /* ViewController.m in Sources */,
+				85888B6028D755ED00646B57 /* AppDelegate.m in Sources */,
+				85888B7128D755EF00646B57 /* main.m in Sources */,
+				85888B6328D755ED00646B57 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85888B7228D755F000646B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85888B7B28D755F000646B57 /* TongZhi_SendDataTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85888B7C28D755F000646B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85888B8728D755F000646B57 /* TongZhi_SendDataUITestsLaunchTests.m in Sources */,
+				85888B8528D755F000646B57 /* TongZhi_SendDataUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85888B7828D755F000646B57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85888B5A28D755ED00646B57 /* TongZhi SendData */;
+			targetProxy = 85888B7728D755F000646B57 /* PBXContainerItemProxy */;
+		};
+		85888B8228D755F000646B57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85888B5A28D755ED00646B57 /* TongZhi SendData */;
+			targetProxy = 85888B8128D755F000646B57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		85888B6728D755ED00646B57 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85888B6828D755ED00646B57 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		85888B6C28D755EF00646B57 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85888B6D28D755EF00646B57 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85888B8828D755F000646B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		85888B8928D755F000646B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85888B8B28D755F000646B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TongZhi SendData/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.TongZhi-SendData";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85888B8C28D755F000646B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TongZhi SendData/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.TongZhi-SendData";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		85888B8E28D755F000646B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.TongZhi-SendDataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TongZhi SendData.app/TongZhi SendData";
+			};
+			name = Debug;
+		};
+		85888B8F28D755F000646B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.TongZhi-SendDataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TongZhi SendData.app/TongZhi SendData";
+			};
+			name = Release;
+		};
+		85888B9128D755F000646B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.TongZhi-SendDataUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TongZhi SendData";
+			};
+			name = Debug;
+		};
+		85888B9228D755F000646B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.TongZhi-SendDataUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TongZhi SendData";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85888B5628D755ED00646B57 /* Build configuration list for PBXProject "TongZhi SendData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85888B8828D755F000646B57 /* Debug */,
+				85888B8928D755F000646B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85888B8A28D755F000646B57 /* Build configuration list for PBXNativeTarget "TongZhi SendData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85888B8B28D755F000646B57 /* Debug */,
+				85888B8C28D755F000646B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85888B8D28D755F000646B57 /* Build configuration list for PBXNativeTarget "TongZhi SendDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85888B8E28D755F000646B57 /* Debug */,
+				85888B8F28D755F000646B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85888B9028D755F000646B57 /* Build configuration list for PBXNativeTarget "TongZhi SendDataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85888B9128D755F000646B57 /* Debug */,
+				85888B9228D755F000646B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85888B5328D755ED00646B57 /* Project object */;
+}
