@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		850784B228857269005E17EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 850784B128857269005E17EA /* AppDelegate.m */; };
+		850784B528857269005E17EA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 850784B428857269005E17EA /* SceneDelegate.m */; };
+		850784B828857269005E17EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 850784B728857269005E17EA /* ViewController.m */; };
+		850784BB28857269005E17EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850784B928857269005E17EA /* Main.storyboard */; };
+		850784BD2885726B005E17EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850784BC2885726B005E17EA /* Assets.xcassets */; };
+		850784C02885726B005E17EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850784BE2885726B005E17EA /* LaunchScreen.storyboard */; };
+		850784C32885726B005E17EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 850784C22885726B005E17EA /* main.m */; };
+		850784CD2885726B005E17EA /* UISlider_UIProgressViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 850784CC2885726B005E17EA /* UISlider_UIProgressViewTests.m */; };
+		850784D72885726B005E17EA /* UISlider_UIProgressViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 850784D62885726B005E17EA /* UISlider_UIProgressViewUITests.m */; };
+		850784D92885726B005E17EA /* UISlider_UIProgressViewUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 850784D82885726B005E17EA /* UISlider_UIProgressViewUITestsLaunchTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		850784C92885726B005E17EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 850784A528857269005E17EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 850784AC28857269005E17EA;
+			remoteInfo = "UISlider&UIProgressView";
+		};
+		850784D32885726B005E17EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 850784A528857269005E17EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 850784AC28857269005E17EA;
+			remoteInfo = "UISlider&UIProgressView";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		850784AD28857269005E17EA /* UISlider&UIProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UISlider&UIProgressView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		850784B028857269005E17EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		850784B128857269005E17EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		850784B328857269005E17EA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		850784B428857269005E17EA /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		850784B628857269005E17EA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		850784B728857269005E17EA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		850784BA28857269005E17EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		850784BC2885726B005E17EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		850784BF2885726B005E17EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		850784C12885726B005E17EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		850784C22885726B005E17EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		850784C82885726B005E17EA /* UISlider&UIProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UISlider&UIProgressViewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		850784CC2885726B005E17EA /* UISlider_UIProgressViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISlider_UIProgressViewTests.m; sourceTree = "<group>"; };
+		850784D22885726B005E17EA /* UISlider&UIProgressViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UISlider&UIProgressViewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		850784D62885726B005E17EA /* UISlider_UIProgressViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISlider_UIProgressViewUITests.m; sourceTree = "<group>"; };
+		850784D82885726B005E17EA /* UISlider_UIProgressViewUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISlider_UIProgressViewUITestsLaunchTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		850784AA28857269005E17EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		850784C52885726B005E17EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		850784CF2885726B005E17EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		850784A428857269005E17EA = {
+			isa = PBXGroup;
+			children = (
+				850784AF28857269005E17EA /* UISlider&UIProgressView */,
+				850784CB2885726B005E17EA /* UISlider&UIProgressViewTests */,
+				850784D52885726B005E17EA /* UISlider&UIProgressViewUITests */,
+				850784AE28857269005E17EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		850784AE28857269005E17EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				850784AD28857269005E17EA /* UISlider&UIProgressView.app */,
+				850784C82885726B005E17EA /* UISlider&UIProgressViewTests.xctest */,
+				850784D22885726B005E17EA /* UISlider&UIProgressViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		850784AF28857269005E17EA /* UISlider&UIProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				850784B028857269005E17EA /* AppDelegate.h */,
+				850784B128857269005E17EA /* AppDelegate.m */,
+				850784B328857269005E17EA /* SceneDelegate.h */,
+				850784B428857269005E17EA /* SceneDelegate.m */,
+				850784B628857269005E17EA /* ViewController.h */,
+				850784B728857269005E17EA /* ViewController.m */,
+				850784B928857269005E17EA /* Main.storyboard */,
+				850784BC2885726B005E17EA /* Assets.xcassets */,
+				850784BE2885726B005E17EA /* LaunchScreen.storyboard */,
+				850784C12885726B005E17EA /* Info.plist */,
+				850784C22885726B005E17EA /* main.m */,
+			);
+			path = "UISlider&UIProgressView";
+			sourceTree = "<group>";
+		};
+		850784CB2885726B005E17EA /* UISlider&UIProgressViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				850784CC2885726B005E17EA /* UISlider_UIProgressViewTests.m */,
+			);
+			path = "UISlider&UIProgressViewTests";
+			sourceTree = "<group>";
+		};
+		850784D52885726B005E17EA /* UISlider&UIProgressViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				850784D62885726B005E17EA /* UISlider_UIProgressViewUITests.m */,
+				850784D82885726B005E17EA /* UISlider_UIProgressViewUITestsLaunchTests.m */,
+			);
+			path = "UISlider&UIProgressViewUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		850784AC28857269005E17EA /* UISlider&UIProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 850784DC2885726B005E17EA /* Build configuration list for PBXNativeTarget "UISlider&UIProgressView" */;
+			buildPhases = (
+				850784A928857269005E17EA /* Sources */,
+				850784AA28857269005E17EA /* Frameworks */,
+				850784AB28857269005E17EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UISlider&UIProgressView";
+			productName = "UISlider&UIProgressView";
+			productReference = 850784AD28857269005E17EA /* UISlider&UIProgressView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		850784C72885726B005E17EA /* UISlider&UIProgressViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 850784DF2885726B005E17EA /* Build configuration list for PBXNativeTarget "UISlider&UIProgressViewTests" */;
+			buildPhases = (
+				850784C42885726B005E17EA /* Sources */,
+				850784C52885726B005E17EA /* Frameworks */,
+				850784C62885726B005E17EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				850784CA2885726B005E17EA /* PBXTargetDependency */,
+			);
+			name = "UISlider&UIProgressViewTests";
+			productName = "UISlider&UIProgressViewTests";
+			productReference = 850784C82885726B005E17EA /* UISlider&UIProgressViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		850784D12885726B005E17EA /* UISlider&UIProgressViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 850784E22885726B005E17EA /* Build configuration list for PBXNativeTarget "UISlider&UIProgressViewUITests" */;
+			buildPhases = (
+				850784CE2885726B005E17EA /* Sources */,
+				850784CF2885726B005E17EA /* Frameworks */,
+				850784D02885726B005E17EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				850784D42885726B005E17EA /* PBXTargetDependency */,
+			);
+			name = "UISlider&UIProgressViewUITests";
+			productName = "UISlider&UIProgressViewUITests";
+			productReference = 850784D22885726B005E17EA /* UISlider&UIProgressViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		850784A528857269005E17EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					850784AC28857269005E17EA = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					850784C72885726B005E17EA = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 850784AC28857269005E17EA;
+					};
+					850784D12885726B005E17EA = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 850784AC28857269005E17EA;
+					};
+				};
+			};
+			buildConfigurationList = 850784A828857269005E17EA /* Build configuration list for PBXProject "UISlider&UIProgressView" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 850784A428857269005E17EA;
+			productRefGroup = 850784AE28857269005E17EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				850784AC28857269005E17EA /* UISlider&UIProgressView */,
+				850784C72885726B005E17EA /* UISlider&UIProgressViewTests */,
+				850784D12885726B005E17EA /* UISlider&UIProgressViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		850784AB28857269005E17EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				850784C02885726B005E17EA /* LaunchScreen.storyboard in Resources */,
+				850784BD2885726B005E17EA /* Assets.xcassets in Resources */,
+				850784BB28857269005E17EA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		850784C62885726B005E17EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		850784D02885726B005E17EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		850784A928857269005E17EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				850784B828857269005E17EA /* ViewController.m in Sources */,
+				850784B228857269005E17EA /* AppDelegate.m in Sources */,
+				850784C32885726B005E17EA /* main.m in Sources */,
+				850784B528857269005E17EA /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		850784C42885726B005E17EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				850784CD2885726B005E17EA /* UISlider_UIProgressViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		850784CE2885726B005E17EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				850784D72885726B005E17EA /* UISlider_UIProgressViewUITests.m in Sources */,
+				850784D92885726B005E17EA /* UISlider_UIProgressViewUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		850784CA2885726B005E17EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 850784AC28857269005E17EA /* UISlider&UIProgressView */;
+			targetProxy = 850784C92885726B005E17EA /* PBXContainerItemProxy */;
+		};
+		850784D42885726B005E17EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 850784AC28857269005E17EA /* UISlider&UIProgressView */;
+			targetProxy = 850784D32885726B005E17EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		850784B928857269005E17EA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				850784BA28857269005E17EA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		850784BE2885726B005E17EA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				850784BF2885726B005E17EA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		850784DA2885726B005E17EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		850784DB2885726B005E17EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		850784DD2885726B005E17EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UISlider&UIProgressView/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.UISlider-UIProgressView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		850784DE2885726B005E17EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UISlider&UIProgressView/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.UISlider-UIProgressView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		850784E02885726B005E17EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.UISlider-UIProgressViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UISlider&UIProgressView.app/UISlider&UIProgressView";
+			};
+			name = Debug;
+		};
+		850784E12885726B005E17EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.UISlider-UIProgressViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UISlider&UIProgressView.app/UISlider&UIProgressView";
+			};
+			name = Release;
+		};
+		850784E32885726B005E17EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.UISlider-UIProgressViewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "UISlider&UIProgressView";
+			};
+			name = Debug;
+		};
+		850784E42885726B005E17EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "note.UISlider-UIProgressViewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "UISlider&UIProgressView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		850784A828857269005E17EA /* Build configuration list for PBXProject "UISlider&UIProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				850784DA2885726B005E17EA /* Debug */,
+				850784DB2885726B005E17EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		850784DC2885726B005E17EA /* Build configuration list for PBXNativeTarget "UISlider&UIProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				850784DD2885726B005E17EA /* Debug */,
+				850784DE2885726B005E17EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		850784DF2885726B005E17EA /* Build configuration list for PBXNativeTarget "UISlider&UIProgressViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				850784E02885726B005E17EA /* Debug */,
+				850784E12885726B005E17EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		850784E22885726B005E17EA /* Build configuration list for PBXNativeTarget "UISlider&UIProgressViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				850784E32885726B005E17EA /* Debug */,
+				850784E42885726B005E17EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 850784A528857269005E17EA /* Project object */;
+}
