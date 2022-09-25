@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		85888BCC28E023D300646B57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888BCB28E023D300646B57 /* main.m */; };
+		85888BD428E0465900646B57 /* KVCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888BD328E0465900646B57 /* KVCObject.m */; };
+		85888BDA28E04AEE00646B57 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888BD928E04AEE00646B57 /* Student.m */; };
+		85888BDD28E04C7100646B57 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 85888BDC28E04C7100646B57 /* Course.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		85888BC828E023D300646B57 /* KVC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KVC; sourceTree = BUILT_PRODUCTS_DIR; };
 		85888BCB28E023D300646B57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85888BD228E0465900646B57 /* KVCObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCObject.h; sourceTree = "<group>"; };
+		85888BD328E0465900646B57 /* KVCObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCObject.m; sourceTree = "<group>"; };
+		85888BD828E04AEE00646B57 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		85888BD928E04AEE00646B57 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		85888BDB28E04C7100646B57 /* Course.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		85888BDC28E04C7100646B57 /* Course.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				85888BCB28E023D300646B57 /* main.m */,
+				85888BDB28E04C7100646B57 /* Course.h */,
+				85888BDC28E04C7100646B57 /* Course.m */,
+				85888BD828E04AEE00646B57 /* Student.h */,
+				85888BD928E04AEE00646B57 /* Student.m */,
+				85888BD228E0465900646B57 /* KVCObject.h */,
+				85888BD328E0465900646B57 /* KVCObject.m */,
 			);
 			path = KVC;
 			sourceTree = "<group>";
@@ -119,7 +134,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85888BDD28E04C7100646B57 /* Course.m in Sources */,
 				85888BCC28E023D300646B57 /* main.m in Sources */,
+				85888BD428E0465900646B57 /* KVCObject.m in Sources */,
+				85888BDA28E04AEE00646B57 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

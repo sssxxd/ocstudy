@@ -10,7 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Course : NSObject
-
+{
+    NSString* courseName;
+}
 @end
 
 NS_ASSUME_NONNULL_END
