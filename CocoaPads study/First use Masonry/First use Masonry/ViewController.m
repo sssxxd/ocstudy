@@ -29,7 +29,7 @@
 //
 //    [self setMutiplierAndConstant];
 //
-//    [self setViewWithKey];
+    [self setViewWithKey];
     
     [self useShorthand];
 }

@@ -1,0 +1,44 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - JSONModel (1.8.0)
+  - Masonry (1.1.0)
+  - SDWebImage (5.13.4):
+    - SDWebImage/Core (= 5.13.4)
+  - SDWebImage/Core (5.13.4)
+
+DEPENDENCIES:
+  - AFNetworking
+  - JSONModel
+  - Masonry
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - JSONModel
+    - Masonry
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SDWebImage: e5cc87bf736e60f49592f307bdf9e157189298a3
+
+PODFILE CHECKSUM: 456f6af6db7f15066f03266d4a0af7a93a3e3e34
+
+COCOAPODS: 1.11.3

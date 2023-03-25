@@ -119,7 +119,6 @@
     
     self.navigationItem.leftBarButtonItem = itemImage;
     
-    
 }
 
 - (void) pressBack {

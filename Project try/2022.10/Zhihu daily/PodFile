@@ -1,0 +1,7 @@
+target 'Zhihu daily' do
+pod 'JSONModel'
+pod 'Masonry'
+pod 'SDWebImage'
+pod 'FMDB'
+pod 'Webkit'
+end

@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03858688DE016F76C2F11796C8B54024 /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B123480111AA101B66FD132F69A04F19 /* JSONAPI.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0AA3775577E7AA8E26383D8B8FE257D1 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC57A8B721404FC3018A83C4B320783 /* JSONModel+networking.m */; };
+		1C8426B6C4D272F8825B575E631462AD /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4827286D342FBCA2C3A7FC34827716 /* JSONModel.m */; };
+		239E2D502A3D4DC0E1CE4B94705E9DEA /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 13FB4045E5A82F19D4C587FBAD11B741 /* JSONModelError.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		258DB13E13597C66114199E13E0EF44D /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DB7C0AC6A5AB1528745E863C3DF6B38 /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		299A88F390A42123F25541F3C08738AB /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = BB2E1A45A0D68F94D3E5C7AFA7EC8B62 /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		54FFC6B1B717A32B5900DCC8285D129F /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F513C5C667C0EC9BF588D7326187FB7A /* JSONModelLib.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		57D451E1DD1B07A31CF74AE8414E1276 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9AF9E0F584A7FAF4ACB214866A59DF /* JSONAPI.m */; };
+		64FECF4B5323A878CEDEB8EFF75879D0 /* Pods-TestModel study-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8022E84533E83A80444D0F1B943A1C50 /* Pods-TestModel study-dummy.m */; };
+		6A9CD9AAD2B2F32372903DD7E65212F7 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = F43593247BDF257FA3F4BA19126FAD49 /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8ADD3BC70702DC6FC222C24C94DD5893 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9B389EBABC4AD6A4F0CCED7C63B414 /* JSONValueTransformer.m */; };
+		9DD5417F36F460B20A7F0E9C3A64E4BF /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 26884312EE5DB8744B7C9ACF0CEDFDE1 /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4E07D39FA6B8F497A27D84038DF3688 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5230134A24F5586B74B6D59C2B603434 /* JSONHTTPClient.m */; };
+		C22025DDBAEEB106807298F664F02C92 /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 904C019A80FECBA3708631EA70DC2B1A /* JSONModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C91AEE54BE87C331F1918ABCF688E918 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD12C8C4F1EC5361827D71B50ECEB34 /* JSONModelError.m */; };
+		CAB8BC3B3625DF034E31C73A4B9CA446 /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065AB44E2D9EA7D9EEB1E1948A2FC10 /* JSONModel-dummy.m */; };
+		D18D41A1C1D5B745E2BEFED91856B5EB /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B79972F00F7F4BDBEACF337AF6B5D67 /* JSONModelClassProperty.m */; };
+		D41A03D06751748B3DE47E57EFC8A3C6 /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 42B797C9AF963BCF332FE0349921071B /* JSONHTTPClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E954D09938A4761880A2F1DFCCC72B78 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F20580627AE234FA059EEA195FFC9367 /* JSONKeyMapper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56039354126A9542AB38B06F7477761D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EAF4371C6E4B30A1779D513CB4355B;
+			remoteInfo = JSONModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03D428383DCB8691D4CF1E7AF5EFD30A /* Pods-TestModel study-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestModel study-acknowledgements.plist"; sourceTree = "<group>"; };
+		1065AB44E2D9EA7D9EEB1E1948A2FC10 /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
+		13FB4045E5A82F19D4C587FBAD11B741 /* JSONModelError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = JSONModel/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
+		26884312EE5DB8744B7C9ACF0CEDFDE1 /* JSONValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
+		2B79972F00F7F4BDBEACF337AF6B5D67 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = JSONModel/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
+		39238840F2196D3C3533B27FC31733E8 /* Pods-TestModel study */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-TestModel study"; path = "libPods-TestModel study.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B797C9AF963BCF332FE0349921071B /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
+		4DB7C0AC6A5AB1528745E863C3DF6B38 /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
+		5230134A24F5586B74B6D59C2B603434 /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
+		5DD12C8C4F1EC5361827D71B50ECEB34 /* JSONModelError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = JSONModel/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
+		6DC57A8B721404FC3018A83C4B320783 /* JSONModel+networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSONModel+networking.m"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.m"; sourceTree = "<group>"; };
+		7C9AF9E0F584A7FAF4ACB214866A59DF /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
+		8022E84533E83A80444D0F1B943A1C50 /* Pods-TestModel study-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestModel study-dummy.m"; sourceTree = "<group>"; };
+		904C019A80FECBA3708631EA70DC2B1A /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E011527A6F3A337828F23F8FBF27920 /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
+		A8A9DF66AFC92821A846B492239DD37B /* Pods-TestModel study-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestModel study-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B123480111AA101B66FD132F69A04F19 /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
+		B94596B2883DD96B7250A7129BA7651E /* JSONModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.release.xcconfig; sourceTree = "<group>"; };
+		BAACA1BF7AB3DD28402C4F9A7C2FD104 /* libJSONModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJSONModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2E1A45A0D68F94D3E5C7AFA7EC8B62 /* JSONModel+networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSONModel+networking.h"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.h"; sourceTree = "<group>"; };
+		C7047775083D0F1E57E7DB77B723EC33 /* JSONModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.debug.xcconfig; sourceTree = "<group>"; };
+		D5E9E2D4E118C19D9D888C30F2FBBC48 /* Pods-TestModel study.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestModel study.debug.xcconfig"; sourceTree = "<group>"; };
+		E7E1F3F44393C6A66941D64C15406C16 /* Pods-TestModel study.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestModel study.release.xcconfig"; sourceTree = "<group>"; };
+		F20580627AE234FA059EEA195FFC9367 /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
+		F43593247BDF257FA3F4BA19126FAD49 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = JSONModel/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
+		F513C5C667C0EC9BF588D7326187FB7A /* JSONModelLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
+		FA9B389EBABC4AD6A4F0CCED7C63B414 /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
+		FF4827286D342FBCA2C3A7FC34827716 /* JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = JSONModel/JSONModel/JSONModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A12E7BCF3DADAEA12DC3B2C8AC1A5090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65F1102377E374F294A1B6B673023C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16941860EF17CCA88617F3CAEFA4E954 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AC5D1B9208CCF7D2F2262194AE31151 /* Pods-TestModel study */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1D70E920BF3C84C2B4FC23EE7D8E9396 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAACA1BF7AB3DD28402C4F9A7C2FD104 /* libJSONModel.a */,
+				39238840F2196D3C3533B27FC31733E8 /* Pods-TestModel study */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AC5D1B9208CCF7D2F2262194AE31151 /* Pods-TestModel study */ = {
+			isa = PBXGroup;
+			children = (
+				A8A9DF66AFC92821A846B492239DD37B /* Pods-TestModel study-acknowledgements.markdown */,
+				03D428383DCB8691D4CF1E7AF5EFD30A /* Pods-TestModel study-acknowledgements.plist */,
+				8022E84533E83A80444D0F1B943A1C50 /* Pods-TestModel study-dummy.m */,
+				D5E9E2D4E118C19D9D888C30F2FBBC48 /* Pods-TestModel study.debug.xcconfig */,
+				E7E1F3F44393C6A66941D64C15406C16 /* Pods-TestModel study.release.xcconfig */,
+			);
+			name = "Pods-TestModel study";
+			path = "Target Support Files/Pods-TestModel study";
+			sourceTree = "<group>";
+		};
+		6235C4BFB5571C4B158CDD874623676A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFB1384C4ECAA144567BECA719184E74 /* JSONModel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				6235C4BFB5571C4B158CDD874623676A /* Pods */,
+				1D70E920BF3C84C2B4FC23EE7D8E9396 /* Products */,
+				16941860EF17CCA88617F3CAEFA4E954 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CFB1384C4ECAA144567BECA719184E74 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				B123480111AA101B66FD132F69A04F19 /* JSONAPI.h */,
+				7C9AF9E0F584A7FAF4ACB214866A59DF /* JSONAPI.m */,
+				42B797C9AF963BCF332FE0349921071B /* JSONHTTPClient.h */,
+				5230134A24F5586B74B6D59C2B603434 /* JSONHTTPClient.m */,
+				4DB7C0AC6A5AB1528745E863C3DF6B38 /* JSONKeyMapper.h */,
+				F20580627AE234FA059EEA195FFC9367 /* JSONKeyMapper.m */,
+				904C019A80FECBA3708631EA70DC2B1A /* JSONModel.h */,
+				FF4827286D342FBCA2C3A7FC34827716 /* JSONModel.m */,
+				BB2E1A45A0D68F94D3E5C7AFA7EC8B62 /* JSONModel+networking.h */,
+				6DC57A8B721404FC3018A83C4B320783 /* JSONModel+networking.m */,
+				F43593247BDF257FA3F4BA19126FAD49 /* JSONModelClassProperty.h */,
+				2B79972F00F7F4BDBEACF337AF6B5D67 /* JSONModelClassProperty.m */,
+				13FB4045E5A82F19D4C587FBAD11B741 /* JSONModelError.h */,
+				5DD12C8C4F1EC5361827D71B50ECEB34 /* JSONModelError.m */,
+				F513C5C667C0EC9BF588D7326187FB7A /* JSONModelLib.h */,
+				26884312EE5DB8744B7C9ACF0CEDFDE1 /* JSONValueTransformer.h */,
+				FA9B389EBABC4AD6A4F0CCED7C63B414 /* JSONValueTransformer.m */,
+				FB05FE5F86CBDAF6DBCCC2250EF67071 /* Support Files */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB05FE5F86CBDAF6DBCCC2250EF67071 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1065AB44E2D9EA7D9EEB1E1948A2FC10 /* JSONModel-dummy.m */,
+				9E011527A6F3A337828F23F8FBF27920 /* JSONModel-prefix.pch */,
+				C7047775083D0F1E57E7DB77B723EC33 /* JSONModel.debug.xcconfig */,
+				B94596B2883DD96B7250A7129BA7651E /* JSONModel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JSONModel";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AD7D888A037BAF513031938BD748B775 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03858688DE016F76C2F11796C8B54024 /* JSONAPI.h in Headers */,
+				D41A03D06751748B3DE47E57EFC8A3C6 /* JSONHTTPClient.h in Headers */,
+				258DB13E13597C66114199E13E0EF44D /* JSONKeyMapper.h in Headers */,
+				C22025DDBAEEB106807298F664F02C92 /* JSONModel.h in Headers */,
+				299A88F390A42123F25541F3C08738AB /* JSONModel+networking.h in Headers */,
+				6A9CD9AAD2B2F32372903DD7E65212F7 /* JSONModelClassProperty.h in Headers */,
+				239E2D502A3D4DC0E1CE4B94705E9DEA /* JSONModelError.h in Headers */,
+				54FFC6B1B717A32B5900DCC8285D129F /* JSONModelLib.h in Headers */,
+				9DD5417F36F460B20A7F0E9C3A64E4BF /* JSONValueTransformer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D538554635773D275F30834012E83667 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A22D3F2B7317C6B23D548C72D6805780 /* Pods-TestModel study */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 675EE75455233E286BA7A3BE8A9ACD99 /* Build configuration list for PBXNativeTarget "Pods-TestModel study" */;
+			buildPhases = (
+				D538554635773D275F30834012E83667 /* Headers */,
+				C2B1AD7F5F7932CC5135A944BD6B4359 /* Sources */,
+				E65F1102377E374F294A1B6B673023C7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFA1E7E4C8BE13591B9D74E1F048CBC6 /* PBXTargetDependency */,
+			);
+			name = "Pods-TestModel study";
+			productName = "Pods-TestModel study";
+			productReference = 39238840F2196D3C3533B27FC31733E8 /* Pods-TestModel study */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 731AC7EE53270147C522AD411689FD21 /* Build configuration list for PBXNativeTarget "JSONModel" */;
+			buildPhases = (
+				AD7D888A037BAF513031938BD748B775 /* Headers */,
+				22BFF46BD14AC0AEA873F8DDF33224CD /* Sources */,
+				A12E7BCF3DADAEA12DC3B2C8AC1A5090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSONModel;
+			productName = JSONModel;
+			productReference = BAACA1BF7AB3DD28402C4F9A7C2FD104 /* libJSONModel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1330;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 1D70E920BF3C84C2B4FC23EE7D8E9396 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */,
+				A22D3F2B7317C6B23D548C72D6805780 /* Pods-TestModel study */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22BFF46BD14AC0AEA873F8DDF33224CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57D451E1DD1B07A31CF74AE8414E1276 /* JSONAPI.m in Sources */,
+				B4E07D39FA6B8F497A27D84038DF3688 /* JSONHTTPClient.m in Sources */,
+				E954D09938A4761880A2F1DFCCC72B78 /* JSONKeyMapper.m in Sources */,
+				1C8426B6C4D272F8825B575E631462AD /* JSONModel.m in Sources */,
+				0AA3775577E7AA8E26383D8B8FE257D1 /* JSONModel+networking.m in Sources */,
+				CAB8BC3B3625DF034E31C73A4B9CA446 /* JSONModel-dummy.m in Sources */,
+				D18D41A1C1D5B745E2BEFED91856B5EB /* JSONModelClassProperty.m in Sources */,
+				C91AEE54BE87C331F1918ABCF688E918 /* JSONModelError.m in Sources */,
+				8ADD3BC70702DC6FC222C24C94DD5893 /* JSONValueTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B1AD7F5F7932CC5135A944BD6B4359 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64FECF4B5323A878CEDEB8EFF75879D0 /* Pods-TestModel study-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFA1E7E4C8BE13591B9D74E1F048CBC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */;
+			targetProxy = 56039354126A9542AB38B06F7477761D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		74181B3ECCB79CD9AFD24E7F09B17FE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7047775083D0F1E57E7DB77B723EC33 /* JSONModel.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = JSONModel;
+				PRODUCT_NAME = JSONModel;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E588D45EAD6076E7A5A2FB632BBCADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7E1F3F44393C6A66941D64C15406C16 /* Pods-TestModel study.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92486E5E72E54FAF60E1A7D022C21B10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		934ED2B84836A780113D1F63484628B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D597CE294FE130C85FF339ED5F579FB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5E9E2D4E118C19D9D888C30F2FBBC48 /* Pods-TestModel study.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF16F55F26F43B0B481C070140F1614A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B94596B2883DD96B7250A7129BA7651E /* JSONModel.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = JSONModel;
+				PRODUCT_NAME = JSONModel;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				934ED2B84836A780113D1F63484628B2 /* Debug */,
+				92486E5E72E54FAF60E1A7D022C21B10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		675EE75455233E286BA7A3BE8A9ACD99 /* Build configuration list for PBXNativeTarget "Pods-TestModel study" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D597CE294FE130C85FF339ED5F579FB2 /* Debug */,
+				8E588D45EAD6076E7A5A2FB632BBCADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		731AC7EE53270147C522AD411689FD21 /* Build configuration list for PBXNativeTarget "JSONModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74181B3ECCB79CD9AFD24E7F09B17FE5 /* Debug */,
+				DF16F55F26F43B0B481C070140F1614A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -101,7 +101,7 @@
 //移除通知
 -(void)dealloc{
 
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 
 }
 

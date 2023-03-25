@@ -1,0 +1,3 @@
+target 'SDWebImage Study' do
+pod 'SDWebImage'
+end

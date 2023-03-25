@@ -95,11 +95,11 @@ int main(int argc, const char * argv[]) {
 //
 //        NSLog(@"%@", object.str);
         
-//        id obj = [NSMutableArray array];
-//
-//        
-//        [obj release];
-//
+        id obj = [NSMutableArray array];
+
+        
+        [obj release];
+
 //        NSLog(@"dsg");
     }
     return 0;

@@ -1,0 +1,6 @@
+target 'Love Nature' do
+pod 'Masonry'
+pod 'JSONModel'
+pod 'AFNetworking'
+pod 'SDWebImage'
+end

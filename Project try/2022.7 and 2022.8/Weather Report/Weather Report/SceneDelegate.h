@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SelectCity/SelectCityViewController.h"
+#import "SelectCityViewController.h"
 
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 

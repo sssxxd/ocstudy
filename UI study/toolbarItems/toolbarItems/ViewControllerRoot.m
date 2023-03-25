@@ -22,9 +22,13 @@
     
     self.title = @"根视图";
     
+    [self.navigationController setNavigationBarHidden:YES];
     
     // 实现工具栏对象
     self.navigationController.toolbarHidden = NO;
+    
+    [self.navigationController.toolbar setBarStyle:UIBarStyleDefault];
+    self.navigationController.toolbar.backgroundColor = [UIColor whiteColor];
     
     self.navigationController.toolbar.translucent = NO;
     

@@ -187,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				85AE484F28A6605100DB0DA7 /* City Wearther Report */,
-				85AE482028A3EB5C00DB0DA7 /* SelectCity */,
 				85AE47EB28A3E8E800DB0DA7 /* AppDelegate.h */,
 				85AE47EC28A3E8E800DB0DA7 /* AppDelegate.m */,
 				85AE47EE28A3E8E800DB0DA7 /* SceneDelegate.h */,
@@ -291,6 +290,7 @@
 				85AE488128A6927E00DB0DA7 /* ShowCitysViewController.m */,
 				85AE488428A692BE00DB0DA7 /* ShowCity.m */,
 				85AE488328A692BE00DB0DA7 /* ShowCity.h */,
+				85AE482028A3EB5C00DB0DA7 /* SelectCity */,
 			);
 			path = "City Wearther Report";
 			sourceTree = "<group>";

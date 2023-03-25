@@ -1,0 +1,3 @@
+target  'Manage' do
+pod  'JSONModel'
+end

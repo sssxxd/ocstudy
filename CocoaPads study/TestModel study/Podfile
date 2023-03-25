@@ -1,0 +1,3 @@
+target 'TestModel study' do
+pod 'JSONModel' , '~>1.8'
+end

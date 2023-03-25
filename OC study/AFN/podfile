@@ -1,0 +1,3 @@
+target 'AFN' do
+pod 'AFNetworking'
+end
