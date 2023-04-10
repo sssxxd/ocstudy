@@ -9,4 +9,8 @@
 
 @implementation UpDataModel
 
+- (instancetype) init {
+    return [super init];
+}
+
 @end

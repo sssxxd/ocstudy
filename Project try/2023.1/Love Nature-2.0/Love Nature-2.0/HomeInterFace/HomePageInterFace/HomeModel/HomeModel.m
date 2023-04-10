@@ -7,22 +7,6 @@
 
 #import "HomeModel.h"
 
-@implementation KeywordListDataModel
-
-+ (BOOL) propertyIsOptional:(NSString *)propertyName {
-    return YES;
-}
-
-@end
-
-@implementation KeywordListModel
-
-+ (BOOL) propertyIsOptional:(NSString *)propertyName {
-    return YES;
-}
-
-@end
-
 @implementation TopRecommendModel
 
 + (BOOL) propertyIsOptional:(NSString *)propertyName {
@@ -32,6 +16,14 @@
 @end
 
 @implementation TopRecommendDataModel
+
++ (BOOL) propertyIsOptional:(NSString *)propertyName {
+    return YES;        
+}
+
+@end
+
+@implementation HomeShareAuthorDataModel
 
 + (BOOL) propertyIsOptional:(NSString *)propertyName {
     return YES;

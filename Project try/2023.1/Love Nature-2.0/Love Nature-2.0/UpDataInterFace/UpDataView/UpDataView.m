@@ -10,16 +10,21 @@
 // 引入第三方库
 #import "Masonry.h"
 
+// 全局变量
+NSString *const UpDataViewaddImageButtonPressed = @"UpDataViewaddImageButtonPressed";
+NSString *const UpDataViewaddressButtonPressed = @"UpDataViewaddressButtonPressed";
+
 @interface UpDataView ()
 <UITextViewDelegate>
 
 @property (nonatomic, strong, readwrite) UITextField* titleTextField;
 @property (nonatomic, strong, readwrite) UITextView* textTextField;
-@property (nonatomic, strong, readwrite) NSMutableArray* imageArray;
 @property (nonatomic, strong) UIButton* addImageButton;
 @property (nonatomic, strong) UIButton* topicButton;
 @property (nonatomic, strong) UIButton* userButton;
 @property (nonatomic, strong) UIView* addressButtonView;
+@property (nonatomic, strong) NSMutableArray* imageViewArray;
+
 @end
 
 @implementation UpDataView
@@ -27,6 +32,8 @@
 - (instancetype) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor whiteColor];
+        
+        [self.addImageButton addTarget:self action:@selector(pressAddImageButton) forControlEvents:UIControlEventTouchUpInside];
         
         [self layoutIfNeeded];
     }
@@ -72,10 +79,35 @@
         make.height.mas_offset(ScreenWidth*0.46f);
     }];
     
+    CGFloat size = ([UIScreen mainScreen].bounds.size.width - 40) / 3;
+    
+    for (int i = 0; i < self.imageArray.count; i++) {
+        UIImage* image = self.imageArray[i];
+        CGFloat size = ([UIScreen mainScreen].bounds.size.width - 40) / 3;
+        
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:image];
+        imageView.userInteractionEnabled = YES;
+        
+        NSInteger indexY = i / 3;
+        NSInteger indexX = i % 3;
+        [self addSubview:imageView];
+        
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.textTextField.mas_bottom).mas_offset((size + 10) * indexY);
+            make.left.mas_offset(10 + (size + 10) * indexX);
+            make.size.mas_offset(size);
+        }];
+        
+        [self.imageViewArray addObject:imageView];
+    }
+    
+    NSInteger count = self.imageArray.count;
+    NSInteger indexY = count / 3;
+    NSInteger indexX = count % 3;
     [self.addImageButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.textTextField.mas_bottom);
-        make.left.equalTo(self.textTextField);
-        make.size.mas_offset(ScreenWidth/3.2f);
+        make.top.mas_equalTo(self.textTextField.mas_bottom).mas_offset((size + 10) * indexY);
+        make.left.mas_offset(10 + (size + 10) * indexX);
+        make.size.mas_offset(size);
     }];
     
     [self.topicButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -98,6 +130,53 @@
         make.right.mas_offset(-20);
         make.height.mas_offset(50);
     }];
+}
+
+- (void) layoutImageView {
+    for (UIImageView* imageView in self.imageViewArray) {
+        [imageView removeFromSuperview];
+    }
+    self.imageViewArray = nil;
+    
+    CGFloat size = ([UIScreen mainScreen].bounds.size.width - 40) / 3;
+    
+    for (int i = 0; i < self.imageArray.count; i++) {
+        UIImage* image = self.imageArray[i];
+        CGFloat size = ([UIScreen mainScreen].bounds.size.width - 40) / 3;
+        
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:image];
+        imageView.userInteractionEnabled = YES;
+        
+        NSInteger indexY = i / 3;
+        NSInteger indexX = i % 3;
+        [self addSubview:imageView];
+        
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.textTextField.mas_bottom).mas_offset((size + 10) * indexY);
+            make.left.mas_offset(10 + (size + 10) * indexX);
+            make.size.mas_offset(size);
+        }];
+        
+        [self.imageViewArray addObject:imageView];
+    }
+    
+    NSInteger count = self.imageArray.count;
+    NSInteger indexY = count / 3;
+    NSInteger indexX = count % 3;
+    [self.addImageButton mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.textTextField.mas_bottom).mas_offset((size + 10) * indexY);
+        make.left.mas_offset(10 + (size + 10) * indexX);
+        make.size.mas_offset(size);
+    }];
+}
+
+#pragma mark - 点击方法
+- (void) pressAddImageButton {
+    [[NSNotificationCenter defaultCenter] postNotificationName:UpDataViewaddImageButtonPressed object:nil];
+}
+
+- (void) pressAdressButton {
+    [[NSNotificationCenter defaultCenter] postNotificationName:UpDataViewaddressButtonPressed object:nil];
 }
 
 #pragma mark - 懒加载
@@ -145,9 +224,10 @@
         UIImageView* addImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"add-bold.png"]];
         [_addImageButton addSubview:addImage];
         
+        CGFloat size = ([UIScreen mainScreen].bounds.size.width - 40) / 3;
         [addImage mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.mas_offset(40);
-            make.right.bottom.mas_offset(-40);
+            make.center.equalTo(_addImageButton);
+            make.size.mas_offset(size*0.4);
         }];
         
         [self addSubview:_addImageButton];
@@ -187,6 +267,7 @@
         UILabel* addressLabel = [[UILabel alloc] init];
         addressLabel.text = @"添加地址";
         addressLabel.textColor = [UIColor blackColor];
+        self.addressLabel = addressLabel;
         UIImageView* addressArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow-right-bold"]];
         
         [_addressButtonView addSubview:addressLogo];
@@ -235,8 +316,22 @@
         }];
         
         [self addSubview:_addressButtonView];
+        
+        UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pressAdressButton)];
+        tap.numberOfTapsRequired = 1;
+        tap.numberOfTouchesRequired = 1;
+        
+        _addressButtonView.userInteractionEnabled = YES;
+        [_addressButtonView addGestureRecognizer:tap];
     }
     return _addressButtonView;
+}
+
+- (NSMutableArray*) imageViewArray {
+    if (_imageViewArray == nil) {
+        self.imageViewArray = [[NSMutableArray alloc] init];
+    }
+    return _imageViewArray;
 }
 
 @end

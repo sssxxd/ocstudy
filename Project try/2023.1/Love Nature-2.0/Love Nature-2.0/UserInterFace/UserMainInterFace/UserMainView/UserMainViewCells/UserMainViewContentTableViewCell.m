@@ -126,13 +126,13 @@ NSString *const UserMainViewContentTableViewCellMainTableCanScroll = @"UserMainV
     UserContentCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:UserContentCollectionViewCellName forIndexPath:indexPath];
     
     if (collectionView == self.petFileCollectionView) {
-        UserContentDataModel* dataModel = self.userPetFileContentDataArray[indexPath.section];
+        UserContentDataModel* dataModel = self.userPetFileContentDataArray[indexPath.row];
         cell.contentDataModel = dataModel;
     } if (collectionView == self.collectCollectionView) {
-        UserContentDataModel* dataModel = self.userCollectContentDataArray[indexPath.section];
+        UserContentDataModel* dataModel = self.userCollectContentDataArray[indexPath.row];
         cell.contentDataModel = dataModel;
     } else {
-        UserContentDataModel* dataModel = self.userLikeContentDataArray[indexPath.section];
+        UserContentDataModel* dataModel = self.userLikeContentDataArray[indexPath.row];
         cell.contentDataModel = dataModel;
     }
     

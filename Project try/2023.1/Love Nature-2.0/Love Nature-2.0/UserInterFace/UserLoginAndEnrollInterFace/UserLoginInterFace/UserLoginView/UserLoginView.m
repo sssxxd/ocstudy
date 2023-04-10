@@ -46,7 +46,7 @@ NSString *const messageOfOpenEnrollViewController = @"messageOfOpenEnrollViewCon
 @property (nonatomic, strong) UILabel* verCodeLabel;
 @property (nonatomic, strong) UITextField* verCodeTextField;
 @property (nonatomic, strong) UIButton* verCodeGetButton;
-@property (nonatomic, strong) NSTimer* getVerCodeTimer;
+@property (nonatomic, weak) NSTimer* getVerCodeTimer;
 
 // 用户提示
 @property (nonatomic, strong) UILabel* userPointOutLabel;

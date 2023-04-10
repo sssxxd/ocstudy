@@ -9,11 +9,13 @@
 
 // 引入类
 @class KeywordListModel;
-@class SearchResultModel;
+@class SearchShareModel;
+@class HomeShareModel;
 
 // 设置块
 typedef void (^KeywordListModelBlock)(KeywordListModel * _Nonnull keywordListModel);
-typedef void (^SearchResultModelBlock)(SearchResultModel * _Nonnull searchResultModel);
+typedef void (^SearchShareModelBlock)(SearchShareModel * _Nonnull searchShareModel);
+typedef void (^HomeShareModelBlock)(HomeShareModel * _Nonnull homeShareModel);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,7 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) searchKeywork:(NSString*)keyword succeedBlock:(KeywordListModelBlock)succeedBlock errorBlock:(ErrorBlock)errorBlock;
 
-- (void) postPetName:(NSString*)name getPetInfoSucceedBlock:(SearchResultModelBlock)succeedBlock erorBlock:(ErrorBlock)errorBlock;
+//- (void) postPetName:(NSString*)name getPetInfoSucceedBlock:(SearchResultModelBlock)succeedBlock erorBlock:(ErrorBlock)errorBlock;
+
+- (void) searchKeyword:(NSString*)keyword withPage:(NSInteger)page SearchShareModelBlock:(SearchShareModelBlock)succeedBlock errorBlock:(ErrorBlock)errorBlock;
+
+- (void) getBlogWithPage:(NSInteger)page Succeed:(HomeShareModelBlock)succeedBlock errorBlock:(ErrorBlock)errorBlock;
 @end
 
 NS_ASSUME_NONNULL_END

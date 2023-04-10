@@ -35,7 +35,7 @@
 @property (nonatomic, strong) UILabel* knowledgeBaseLabel;
 
 @property (nonatomic, strong) UIPageControl* pageController;
-@property (nonatomic, strong) NSTimer* timer;
+@property (nonatomic, weak) NSTimer* timer;
 
 @end
 

@@ -1,20 +1,17 @@
 //
 //  SearchViewController.h
-//  Love Nature-2.0
+//  Find
 //
-//  Created by 孙旭东 on 2023/2/6.
+//  Created by 孙旭东 on 2023/3/29.
 //
 
 #import <UIKit/UIKit.h>
-
-// 引入类
-@class KeywordListModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchViewController : UIViewController
 
-@property (nonatomic, strong) KeywordListModel* keywordListModel;
+@property (nonatomic, strong) UITextField* searchTextField;
 
 @end
 

@@ -3,4 +3,5 @@ pod 'Masonry'
 pod 'JSONModel'
 pod 'AFNetworking'
 pod 'SDWebImage'
+pod 'FMDB'
 end

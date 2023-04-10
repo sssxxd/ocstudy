@@ -11,6 +11,8 @@
 #import "UserMainViewController.h"
 #import "HomeViewController.h"
 #import "UpDataViewController.h"
+#import "ShopMallViewController.h"
+#import "MessageViewController.h"
 
 // 引入第三方库
 #import "Masonry.h"
@@ -122,7 +124,9 @@
     self.navViewControllerArray = [NSMutableArray array];
     
     [self createHomeViewController];
+    [self createShopMallViewController];
     [self createUpDataViewController];
+    [self createMessageViewController];
     [self createUserMainViewController];
     
     self.tabBarController = [[UITabBarController alloc] init];
@@ -159,6 +163,28 @@
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:viewController];
     
     UITabBarItem* item = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"add-2.png"] tag:101];
+    
+    nav.tabBarItem = item;
+    [_navViewControllerArray addObject:nav];
+}
+
+- (void) createShopMallViewController {
+    ShopMallViewController* viewController = [[ShopMallViewController alloc] init];
+    
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    UITabBarItem* item = [[UITabBarItem alloc] initWithTitle:@"商场" image:[UIImage imageNamed:@"shopping-2.png"] tag:101];
+    
+    nav.tabBarItem = item;
+    [_navViewControllerArray addObject:nav];
+}
+
+- (void) createMessageViewController {
+    MessageViewController* viewController = [[MessageViewController alloc] init];
+    
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    UITabBarItem* item = [[UITabBarItem alloc] initWithTitle:@"在线医疗" image:[UIImage imageNamed:@"cloud.png"] tag:101];
     
     nav.tabBarItem = item;
     [_navViewControllerArray addObject:nav];

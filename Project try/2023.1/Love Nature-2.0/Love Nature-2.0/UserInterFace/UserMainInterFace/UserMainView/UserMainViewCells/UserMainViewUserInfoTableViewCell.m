@@ -20,6 +20,8 @@ NSString *const UserMainViewUserInfoTableViewCellEditUserInfo = @"UserMainViewUs
 
 NSString *const UserMainViewUserInfoTableViewCellUpDataIcon = @"UserMainViewUserInfoTableViewCellUpDataIcon";
 
+NSString *const UserMainViewUserInfoTableViewCellSetting = @"UserMainViewUserInfoTableViewCellSetting";
+
 @interface UserMainViewUserInfoTableViewCell ()
 
 @property (nonatomic, strong) UIImageView* userIconImageView;
@@ -119,6 +121,7 @@ NSString *const UserMainViewUserInfoTableViewCellUpDataIcon = @"UserMainViewUser
         
         self.setButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.setButton setImage:[UIImage imageNamed:@"setting.png"] forState:UIControlStateNormal];
+        [self.setButton addTarget:self action:@selector(pressSettingButton) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:self.setButton];
     }
     return self;
@@ -211,9 +214,8 @@ NSString *const UserMainViewUserInfoTableViewCellUpDataIcon = @"UserMainViewUser
 
 // 登陆后刷新用户信息
 - (void) setUserInfoWithData {
-    NSString* urlString = [NSString stringWithFormat:@"http://rqxoyicd6.hd-bkt.clouddn.com/%@", _userIconURLString];
 
-    [[LNManager shareLNManager] useImageURLString:urlString setImageVIew:_userIconImageView];
+    [[LNManager shareLNManager] useImageURLString:_userIconURLString setImageVIew:_userIconImageView];
 
     _userFolloweeNumberLabel.text = [NSString stringWithFormat:@"%@", _userFolloweeString];
     _userFolloweeLabel.text = @"关注";
@@ -248,6 +250,10 @@ NSString *const UserMainViewUserInfoTableViewCellUpDataIcon = @"UserMainViewUser
     if (_userIconURLString) {
         [[NSNotificationCenter defaultCenter] postNotificationName:UserMainViewUserInfoTableViewCellUpDataIcon object:nil];
     }
+}
+
+- (void) pressSettingButton {
+    [[NSNotificationCenter defaultCenter] postNotificationName:UserMainViewUserInfoTableViewCellSetting object:nil];
 }
 
 @end

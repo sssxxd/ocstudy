@@ -11,7 +11,10 @@
 
 @implementation LNManager (SetWebImage)
 - (void) useImageURLString:(NSString *)urlString setImageVIew:(UIImageView *)imageView {
-    NSString* string = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    
+    NSString* string = [NSString stringWithFormat:@"http://rsbdaunui.hd-bkt.clouddn.com/%@", urlString];
+    
+    string = [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     NSURL* url = [NSURL URLWithString:string];
     

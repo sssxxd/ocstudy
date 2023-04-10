@@ -15,6 +15,7 @@
 
 // 引入视图控制器
 #import "SearchViewController.h"
+#import "ClassifictaionViewController.h"
 
 // 引入视图类和模型类
 #import "HomeView.h"
@@ -40,7 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initHomeModel];
-    [self initHomeView];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self initNavSubViews];
 }
@@ -73,17 +74,18 @@
     }
     self.homeModel.topRecommendModel.data = (NSArray<TopRecommendDataModel>*)array;
     
-    NSMutableArray* array2 = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 12; i++) {
-        HomeShareDataModel* data = [[HomeShareDataModel alloc] init];
-        data.userName = @"铲屎官";
-        data.title = @"狸花猫，猫界中的战斗猫！";
-        data.mainImage = @"lihuamao.jpg";
-        data.userIcon = @"userIcon.jpeg";
+    [[LNManager shareLNManager] getBlogWithPage:1 Succeed:^(HomeShareModel * _Nonnull homeShareModel) {
         
-        [array2 addObject:data];
-    }
-    self.homeModel.homeShareModel.data = (NSArray<HomeShareDataModel>*)array2;
+        self.homeModel.homeShareModel = homeShareModel;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self initHomeView];
+            [self.homeView reloadView];
+        });
+    } errorBlock:^(NSError * _Nonnull error) {
+        NSLog(@"getBlog error");
+    }];
+    
 }
 
 // 初始化视图
@@ -91,11 +93,17 @@
     self.homeView = [[HomeView alloc] initWithFrame:self.view.bounds];
     
     self.homeView.HomeTopRecommendDataArray = (NSArray*)self.homeModel.topRecommendModel.data;
-    self.homeView.HomeShareDataArray = (NSArray*)self.homeModel.homeShareModel.data;
+    self.homeView.HomeShareDataArray = self.homeModel.homeShareModel.data;
     
     [self.homeView initView];
     
     [self.view addSubview:self.homeView];
+}
+#pragma mark - 分类
+- (void) createClassViewController {
+    ClassifictaionViewController* viewController = [[ClassifictaionViewController alloc] init];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - 搜索功能
@@ -110,26 +118,16 @@
     self.navigationItem.rightBarButtonItem = self.cameraItem;
 }
 
-- (BOOL) textFieldShouldReturn:(UITextField *)textField {
-    [[LNManager shareLNManager] searchKeywork:self.searchTextField.text succeedBlock:^(KeywordListModel * _Nonnull keywordListModel) {
-        
-        self.homeModel.keywordListModel = keywordListModel;
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self createSearchViewController];
-        });
-    } errorBlock:^(NSError * _Nonnull error) {
-        NSLog(@"searchKeyList error");
-    }];
+- (BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
+    SearchViewController* viewController = [[SearchViewController alloc] init];
     
-    [self.searchTextField resignFirstResponder];
-    return YES;
+    [self.navigationController pushViewController:viewController animated:YES];
+    
+    return NO;
 }
 
 - (void) createSearchViewController {
     SearchViewController* viewController = [[SearchViewController alloc] init];
-    
-    viewController.keywordListModel = _homeModel.keywordListModel;
     
     [self.navigationController pushViewController:viewController animated:YES];
 }
@@ -157,7 +155,7 @@
 
 - (UIBarButtonItem*) moreItem {
     if (_moreItem == nil) {
-        self.moreItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"gengduomore-1.png"] style:UIBarButtonItemStyleDone target:self action:nil];
+        self.moreItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"gengduomore-1.png"] style:UIBarButtonItemStyleDone target:self action:@selector(createClassViewController)];
         
         _moreItem.tintColor = [UIColor blackColor];
     }

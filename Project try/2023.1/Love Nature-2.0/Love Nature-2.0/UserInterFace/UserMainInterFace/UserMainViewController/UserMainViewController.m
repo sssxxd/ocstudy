@@ -19,10 +19,12 @@
 
 // 引入视图控制器
 #import "UserLoginViewController.h"
+#import "UserMainSettingViewController.h"
 
 // 引入全局变量
 extern NSString *const UserMainViewUserInfoTableViewCellEditUserInfo;
 extern NSString *const UserMainViewUserInfoTableViewCellUpDataIcon;
+extern NSString *const UserMainViewUserInfoTableViewCellSetting;
 
 @interface UserMainViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 // 视图和模型属性
@@ -49,22 +51,6 @@ extern NSString *const UserMainViewUserInfoTableViewCellUpDataIcon;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-//// 设置NavigationBar
-//- (void) createNavigationBarAppearance {
-//    UINavigationBarAppearance* appearance = [[UINavigationBarAppearance alloc] init];
-//    appearance.backgroundColor = [UIColor whiteColor];
-//    appearance.shadowImage = [UIImage new];
-//    appearance.shadowColor = nil;
-//
-//    self.title = @"我的";
-////    self.navigationController.title = nil;
-//
-////    [appearance setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:18]}];
-//
-//    self.navigationController.navigationBar.standardAppearance = appearance;
-//    self.navigationController.navigationBar.scrollEdgeAppearance = appearance;
-//}
-
 // 初始化模型
 - (void) initUserMainModel {
     self.userMainModel = [[UserMainModel alloc] init];
@@ -73,8 +59,11 @@ extern NSString *const UserMainViewUserInfoTableViewCellUpDataIcon;
         [[LNManager shareLNManager] getUserInfoWithNickName:_userMainModel.nickName AndToken:_userMainModel.token UserInfoModelBlock:^(UserInfoModel * _Nonnull userInfoModel) {
             
             self.userMainModel.userInfoModel = userInfoModel;
-            
+
             dispatch_async(dispatch_get_main_queue(), ^{
+                if (self.userMainView) {
+                    self.userMainView.userInfoDataModel = self.userMainModel.userInfoModel.data;
+                }
                 [self.userMainView reloadTableView];
             });
         } ErrorBlack:^(NSError * _Nonnull error) {
@@ -83,12 +72,29 @@ extern NSString *const UserMainViewUserInfoTableViewCellUpDataIcon;
     }
     
     NSMutableArray* array2 = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 6; i++) {
         UserContentDataModel* data = [[UserContentDataModel alloc] init];
-        data.userName = @"铲屎官";
-        data.title = @"狸花猫，猫界中的战斗猫！";
-        data.mainImage = @"lihuamao.jpg";
-        data.userIcon = @"userIcon.jpeg";
+        if (i == 0) {
+            data.userName = @"铲屎官";
+            data.title = @"是会跳伞的兔子嘞";
+            data.mainImage = @"WechatIMG1497";
+            data.userIcon = @"userIcon.jpeg";
+        } else if (i == 1) {
+            data.userName = @"铲屎官";
+            data.title = @"晒太阳的羊驼";
+            data.mainImage = @"WechatIMG1498";
+            data.userIcon = @"userIcon.jpeg";
+        } else if (i == 2) {
+            data.userName = @"铲屎官";
+            data.title = @"可爱可爱的荷兰猪";
+            data.mainImage = @"WechatIMG1499";
+            data.userIcon = @"userIcon.jpeg";
+        } else {
+            data.userName = @"铲屎官";
+            data.title = @"杯子里的刺猬";
+            data.mainImage = @"WechatIMG1500";
+            data.userIcon = @"userIcon.jpeg";
+        }
         
         [array2 addObject:data];
     }
@@ -120,12 +126,22 @@ extern NSString *const UserMainViewUserInfoTableViewCellUpDataIcon;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(UserLoginViewControllerLoginSucceedWithNotification:) name:UserLoginViewControllerLoginSucceed object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exitLogout) name:messageOfExitLogin object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exitLogout) name:TuiChuDengLu object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(UpDataUserIcon) name:UserMainViewUserInfoTableViewCellUpDataIcon object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(createUserSettingViewController) name:UserMainViewUserInfoTableViewCellSetting object:nil];
 }
 
 #pragma mark - 通知方法
+
+// 打开设置界面
+- (void) createUserSettingViewController {
+    UserMainSettingViewController* viewController = [[UserMainSettingViewController alloc] init];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 // 编辑个人信息
 - (void) createEditUserInfoViewController {
     
@@ -222,6 +238,7 @@ extern NSString *const UserMainViewUserInfoTableViewCellUpDataIcon;
         
         UIAlertAction* action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             dispatch_async(dispatch_get_main_queue(), ^{
+                
                 [self reloadUserMainModel];
             });
         }];

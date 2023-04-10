@@ -19,6 +19,8 @@ extern NSString *const UserMainViewUserInfoTableViewCellEditUserInfo;
 
 extern NSString *const UserMainViewUserInfoTableViewCellUpDataIcon;
 
+extern NSString *const UserMainViewUserInfoTableViewCellSetting;
+
 @interface UserMainViewUserInfoTableViewCell : UITableViewCell
 // UILabel
 @property (nonatomic, strong) UILabel* userNickNameLabel;

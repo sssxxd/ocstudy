@@ -9,25 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol KeywordListDataModel <NSObject>
-@end
-
 @protocol TopRecommendDataModel <NSObject>
 @end
 
 @protocol HomeShareDataModel <NSObject>
 @end
 
-@interface KeywordListDataModel : JSONModel
-@property (nonatomic, copy) NSString* name;
-@property (nonatomic, copy) NSString* image;
-@end
-
-@interface KeywordListModel : JSONModel
-@property (nonatomic, copy) NSArray<KeywordListDataModel>* data;
-@property (nonatomic, copy) NSString* code;
-@property (nonatomic, copy) NSString* msg;
-@property (nonatomic, strong) NSError* err;
+@protocol NSString <NSObject>
 @end
 
 @interface TopRecommendDataModel : JSONModel
@@ -43,11 +31,20 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSError* err;
 @end
 
+@interface HomeShareAuthorDataModel : JSONModel
+@property (nonatomic, copy) NSString* email;
+@property (nonatomic, copy) NSString* nickName;
+@property (nonatomic, copy) NSString* icon;
+@end
+
 @interface HomeShareDataModel : JSONModel
-@property (nonatomic, copy) NSString* mainImage;
-@property (nonatomic, copy) NSString* userIcon;
-@property (nonatomic, copy) NSString* userName;
-@property (nonatomic, copy) NSString* title;
+@property (nonatomic, copy) NSString* createdAt;
+@property (nonatomic, strong) HomeShareAuthorDataModel* author;
+@property (nonatomic, copy) NSString* content;
+@property (nonatomic, copy) NSString* blogTitle;
+@property (nonatomic, copy) NSArray<NSString>* pictures;
+@property (nonatomic, assign) NSInteger getLikesNumber;
+@property (nonatomic, copy) NSString* location;
 @end
 
 @interface HomeShareModel : JSONModel
@@ -58,7 +55,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface HomeModel : NSObject
-@property (nonatomic, strong) KeywordListModel* keywordListModel;
 @property (nonatomic, strong) TopRecommendModel* topRecommendModel;
 @property (nonatomic, strong) HomeShareModel* homeShareModel;
 @end

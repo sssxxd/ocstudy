@@ -39,7 +39,7 @@ NSString *const enrollMessageOfGetVerCode = @"enrollMessageOfGetVerCode";
 @property (nonatomic, strong) UIButton* getVerCodeButton;
 
 // 计时器
-@property (nonatomic, strong) NSTimer* getVerCodeTimer;
+@property (nonatomic, weak) NSTimer* getVerCodeTimer;
 @end
 
 
@@ -133,6 +133,7 @@ NSString *const enrollMessageOfGetVerCode = @"enrollMessageOfGetVerCode";
 
 // 获取验证码
 - (void) pressGetVerCodeButton:(UIButton*)sender {
+    NSLog(@"cdv");
     sender.userInteractionEnabled = NO;
     [sender setTitle:[NSString stringWithFormat:@"%ld s后", timeOfPressgetVerCodeButton] forState:UIControlStateNormal];
     [self createGetVerCodeTimer];
@@ -323,7 +324,6 @@ NSString *const enrollMessageOfGetVerCode = @"enrollMessageOfGetVerCode";
         _verCodeTextField.layer.masksToBounds = YES;
         _verCodeTextField.layer.borderColor = [UIColor blackColor].CGColor;
         _verCodeTextField.layer.borderWidth = 2;
-        _verCodeTextField.userInteractionEnabled = NO;
         
         UIView* paddView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 46)];
         _verCodeTextField.leftView = paddView;

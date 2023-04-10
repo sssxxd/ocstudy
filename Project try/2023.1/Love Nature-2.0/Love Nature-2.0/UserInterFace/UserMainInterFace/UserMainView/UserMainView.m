@@ -23,7 +23,6 @@
 
 // 定义全局变量
 NSString *const messageOfToLogin = @"messageOfToLogin";
-NSString *const messageOfExitLogin = @"messageOfExitLogin";
 
 NSString *const UserMainViewPressPetFile = @"UserMainViewPressPetFile";
 NSString *const UserMainViewPressCollect = @"UserMainViewPressCollect";
@@ -319,7 +318,12 @@ extern NSString *const UserMainViewContentTableViewCellMainTableCanScroll;
 
     if (shouldInheritInertia) {
         CGPoint newOffset = self.tableView.contentOffset;
-        newOffset.y -= inertiaVelocity.y / 10;
+        
+        if (inertiaVelocity.y / 10 > 210) {
+            newOffset.y -= 180;
+        } else {
+            newOffset.y -= inertiaVelocity.y / 10;
+        }
         
         [self.tableView setContentOffset:newOffset animated:YES];
     }

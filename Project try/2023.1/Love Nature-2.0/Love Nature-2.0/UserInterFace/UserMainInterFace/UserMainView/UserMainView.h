@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 设置全局变量
 extern NSString *const messageOfToLogin;
-extern NSString *const messageOfExitLogin;
 
 extern NSString *const UserMainViewPressPetFile;
 extern NSString *const UserMainViewPressCollect;

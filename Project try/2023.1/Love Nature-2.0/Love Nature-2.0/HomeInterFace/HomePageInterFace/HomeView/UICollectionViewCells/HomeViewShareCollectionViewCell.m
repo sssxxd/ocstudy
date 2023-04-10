@@ -13,6 +13,9 @@
 // 引入第三方库
 #import "Masonry.h"
 
+// 引入工具类
+#import "LNManager.h"
+
 @interface HomeViewShareCollectionViewCell ()
 
 @property (nonatomic, strong) UILabel* titleLabel;
@@ -52,10 +55,10 @@
     _userIconImageView.layer.cornerRadius = _iconWidth / 2;
     _userIconImageView.layer.masksToBounds = YES;
     
-    _mainImageView.image = [UIImage imageNamed:_shareDataModel.mainImage];
-    _userIconImageView.image = [UIImage imageNamed:_shareDataModel.userIcon];
-    _userNameLabel.text = _shareDataModel.userName;
-    _titleLabel.text = _shareDataModel.title;
+    [[LNManager shareLNManager] useImageURLString:_shareDataModel.pictures[0] setImageVIew:_mainImageView];
+    [[LNManager shareLNManager] useImageURLString:_shareDataModel.author.icon setImageVIew:_userIconImageView];
+    _userNameLabel.text = _shareDataModel.author.nickName;
+    _titleLabel.text = _shareDataModel.blogTitle;
     
     [self layoutOfMasonry];
 }
