@@ -12,7 +12,7 @@
 #import "HomeViewController.h"
 #import "UpDataViewController.h"
 #import "ShopMallViewController.h"
-#import "MessageViewController.h"
+#import "MedicalViewController.h"
 
 // 引入第三方库
 #import "Masonry.h"
@@ -126,7 +126,7 @@
     [self createHomeViewController];
     [self createShopMallViewController];
     [self createUpDataViewController];
-    [self createMessageViewController];
+    [self createMedicalViewController];
     [self createUserMainViewController];
     
     self.tabBarController = [[UITabBarController alloc] init];
@@ -179,8 +179,8 @@
     [_navViewControllerArray addObject:nav];
 }
 
-- (void) createMessageViewController {
-    MessageViewController* viewController = [[MessageViewController alloc] init];
+- (void) createMedicalViewController {
+    MedicalViewController* viewController = [[MedicalViewController alloc] init];
     
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:viewController];
     

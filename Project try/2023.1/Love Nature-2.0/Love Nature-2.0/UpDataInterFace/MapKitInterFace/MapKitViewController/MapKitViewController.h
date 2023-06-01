@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString *const MapKitViewControllerOkItemPressed;
+
 @interface MapKitViewController : UIViewController
 <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (strong, nonatomic) MKMapView *mapView;

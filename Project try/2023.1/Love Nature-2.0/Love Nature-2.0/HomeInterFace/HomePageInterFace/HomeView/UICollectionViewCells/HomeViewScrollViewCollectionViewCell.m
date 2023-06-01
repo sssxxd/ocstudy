@@ -13,6 +13,8 @@
 // 引入第三方库
 #import "Masonry.h"
 
+NSString *const HomeViewKnoledgeBaseButtonPressed = @"HomeViewKnoledgeBaseButtonPressed";
+
 @interface HomeViewScrollViewCollectionViewCell ()
 <UIScrollViewDelegate>
 
@@ -175,6 +177,10 @@
         make.centerX.equalTo(self.knowledgeBaseButton);
     }];
 }
+#pragma mark - 点击方法
+- (void) knoledgeBasePressed {
+    [[NSNotificationCenter defaultCenter] postNotificationName:HomeViewKnoledgeBaseButtonPressed object:nil];
+}
 
 #pragma mark - 自动无限轮博设计
 - (void) scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -279,6 +285,8 @@
     if (_knowledgeBaseButton == nil) {
         self.knowledgeBaseButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_knowledgeBaseButton setImage:[UIImage imageNamed:@"jurassic_hat.png"] forState:UIControlStateNormal];
+        
+        [_knowledgeBaseButton addTarget:self action:@selector(knoledgeBasePressed) forControlEvents:UIControlEventTouchUpInside];
         
         [self.contentView addSubview:_knowledgeBaseButton];
     }

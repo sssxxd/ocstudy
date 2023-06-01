@@ -14,6 +14,9 @@
 NSString *const UpDataViewaddImageButtonPressed = @"UpDataViewaddImageButtonPressed";
 NSString *const UpDataViewaddressButtonPressed = @"UpDataViewaddressButtonPressed";
 
+
+extern NSString *const MapKitViewControllerOkItemPressed;
+
 @interface UpDataView ()
 <UITextViewDelegate>
 
@@ -35,14 +38,25 @@ NSString *const UpDataViewaddressButtonPressed = @"UpDataViewaddressButtonPresse
         
         [self.addImageButton addTarget:self action:@selector(pressAddImageButton) forControlEvents:UIControlEventTouchUpInside];
         
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeLocation:) name:MapKitViewControllerOkItemPressed object:nil];
+        
         [self layoutIfNeeded];
     }
     return self;
 }
 
-- (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.titleTextField resignFirstResponder];
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.textTextField resignFirstResponder];
+    [self.titleTextField resignFirstResponder];
+}
+
+- (void) changeLocation:(NSNotification *)notification {
+    NSString* loaction = [NSString stringWithFormat:@"%@%@", notification.userInfo[@"title"], notification.userInfo[@"subtitle"]];
+    self.addressLabel.text = loaction;
 }
 
 - (void) textViewDidBeginEditing:(UITextView *)textView {

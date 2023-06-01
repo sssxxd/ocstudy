@@ -10,7 +10,12 @@
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 
+NSString *const MapKitViewControllerOkItemPressed = @"MapKitViewControllerOkItemPressed";
+
 @interface MapKitViewController ()
+
+@property (nonatomic, strong) UIBarButtonItem* OkItem;
+@property (nonatomic, strong) HJCAnnotion* ann1;
 
 @end
 
@@ -25,6 +30,7 @@
     [self.manager requestAlwaysAuthorization];
     [self.manager startUpdatingLocation];
     [self createBackItem];
+    self.navigationItem.rightBarButtonItem = self.OkItem;
     // Do any additional setup after loading the view.
 }
 
@@ -78,8 +84,8 @@
         self.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
         [self.mapView setRegion:region];
         
-        HJCAnnotion* ann1 = [[HJCAnnotion alloc ] init];
-        [self.mapView addAnnotation:ann1];
+        self.ann1 = [[HJCAnnotion alloc ] init];
+        [self.mapView addAnnotation:self.ann1];
         //创建手势
         //UITapGestureRecognizer *top = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addMyAnootation:)];
         //   加入地图上
@@ -113,6 +119,32 @@
 
 - (void) pressBackItem {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) pressOmItem {
+    [[NSNotificationCenter defaultCenter] postNotificationName:MapKitViewControllerOkItemPressed object:nil userInfo:@{@"title":@"西安邮电大学", @"subtitle":@"长安校区西区"}];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (UIBarButtonItem*) OkItem {
+    if (_OkItem == nil) {
+        UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 35)];
+        customView.backgroundColor = [UIColor colorWithRed:0.165f green:0.510f blue:0.895f alpha:1];
+        customView.layer.cornerRadius = 8;
+        customView.layer.masksToBounds = YES;
+        
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        button.frame = CGRectMake(0, 0, 60, 35);
+        [button setTitle:@"确定" forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        button.titleLabel.font = [UIFont systemFontOfSize:18];
+        [button addTarget:self action:@selector(pressOmItem) forControlEvents:UIControlEventTouchUpInside];
+        
+        [customView addSubview:button];
+        
+        self.OkItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
+    }
+    return _OkItem;
 }
 
 @end

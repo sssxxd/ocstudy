@@ -189,6 +189,8 @@ extern NSString *const UserMainViewContentTableViewCellMainTableCanScroll;
         cell.userCollectContentDataArray = self.userCollectContentDataArray;
         cell.userLikeContentDataArray = self.userLikeContentDataArray;
         
+        [cell reloadSubViews];
+        
        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         
         return cell;

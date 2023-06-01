@@ -25,6 +25,8 @@
 static NSString *const HomeViewScrollViewCollectionViewCellName = @"HomeViewScrollViewCollectionViewCell";
 static NSString *const HomeViewShareCollectionViewCellName = @"HomeViewShareCollectionViewCell";
 
+NSString *const HomeViewTitleCellPressed = @"HomeViewTitleCellPressed";
+
 @interface HomeView ()
 <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView* collectionView;
@@ -89,6 +91,14 @@ static NSString *const HomeViewShareCollectionViewCellName = @"HomeViewShareColl
         [cell layoutIfNeeded];
         
         return cell;
+    }
+}
+
+- (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row != 0) {
+        NSNumber* num = [NSNumber numberWithInteger:indexPath.row - 1];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:HomeViewTitleCellPressed object:nil userInfo:@{@"value":num}];
     }
 }
 

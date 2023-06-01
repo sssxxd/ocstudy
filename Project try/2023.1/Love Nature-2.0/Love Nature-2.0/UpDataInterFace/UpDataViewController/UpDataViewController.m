@@ -18,6 +18,9 @@
 #import "UpDataView.h"
 #import "UpDataModel.h"
 
+// 引入工具类
+#import "LNManager.h"
+
 // 全局变量
 extern NSString *const UpDataViewaddImageButtonPressed;
 extern NSString *const UpDataSelectViewControllerSelectImageOK;
@@ -26,6 +29,7 @@ extern NSString *const UpDataViewaddressButtonPressed;
 @interface UpDataViewController ()
 
 @property (nonatomic, strong) UpDataView* upDataView;
+@property (nonatomic, strong) UpDataModel* upDataModel;
 @property (nonatomic, strong) UIBarButtonItem* cancelItem;
 @property (nonatomic, strong) UIBarButtonItem* upDataItem;
 @property (nonatomic, copy) NSArray* allImageArray;
@@ -54,6 +58,7 @@ extern NSString *const UpDataViewaddressButtonPressed;
 }
 
 #pragma mark - 点击方法
+
 - (void) createUpDataSelectViewController {
     UpDataSelectViewController* viewController = [[UpDataSelectViewController alloc] init];
     
@@ -89,7 +94,23 @@ extern NSString *const UpDataViewaddressButtonPressed;
 }
 
 - (void) pressUpdDataItem {
+    NSString* blogTitle = self.upDataView.titleTextField.text;
+    NSString* content = self.upDataView.textTextField.text;
+    NSString* location = self.upDataView.addressLabel.text;
+    NSArray* pictures = self.upDataView.imageArray;
     
+    [[LNManager shareLNManager] postNickName:self.upDataModel.nickName Token:self.upDataModel.token blogTitle:blogTitle Content:content Location:location pictures:pictures succeedBlock:^(UpDataTitleModel * _Nonnull upDataTitleModel) {
+        
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:upDataTitleModel.data message:nil preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+        
+        [alertController addAction:action];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+    } ErrorBlock:^(NSError * _Nonnull error) {
+        NSLog(@"pressUpdDataItem error");
+    }];
 }
 
 - (void) pressMapKit {
@@ -134,6 +155,13 @@ extern NSString *const UpDataViewaddressButtonPressed;
         self.upDataItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
     }
     return _upDataItem;
+}
+
+- (UpDataModel *)upDataModel {
+    if (_upDataModel == nil) {
+        self.upDataModel = [[UpDataModel alloc] init];
+    }
+    return _upDataModel;
 }
 
 @end

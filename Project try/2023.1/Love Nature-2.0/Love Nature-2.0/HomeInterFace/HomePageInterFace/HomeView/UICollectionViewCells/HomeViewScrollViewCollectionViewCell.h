@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// 设置全局变量
+extern NSString *const HomeViewKnoledgeBaseButtonPressed;
+
 @interface HomeViewScrollViewCollectionViewCell : UICollectionViewCell
 @property (nonatomic, strong) NSArray* dataArray;
 @end

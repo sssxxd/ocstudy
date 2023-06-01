@@ -83,7 +83,12 @@ NSString *const UserMainViewContentTableViewCellMainTableCanScroll = @"UserMainV
 
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self removeObserver:self forKeyPath:@"isSubCellScroll"];
+}
+
+- (void)reloadSubViews {
+    [self.petFileCollectionView reloadData];
+    [self.collectCollectionView reloadData];
+    [self.likeCollectionView reloadData];
 }
 
 #pragma mark - 通知方法

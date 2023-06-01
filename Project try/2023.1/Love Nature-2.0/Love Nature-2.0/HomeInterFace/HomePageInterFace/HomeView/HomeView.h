@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString *const HomeViewTitleCellPressed;
+
 @interface HomeView : UIView
 
 @property (nonatomic, copy) NSArray* HomeTopRecommendDataArray;

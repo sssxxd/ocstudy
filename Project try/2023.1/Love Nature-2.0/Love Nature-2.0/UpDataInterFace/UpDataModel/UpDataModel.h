@@ -9,6 +9,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol UpDataTitleDataModel <NSObject>
+@end
+
+@interface UpDataTitleModel : JSONModel
+@property (nonatomic, copy) NSString* data;
+@property (nonatomic, copy) NSString* code;
+@property (nonatomic, copy) NSString* msg;
+@end
+
+
 @interface UpDataModel : NSObject
 
 @property (nonatomic, copy) NSString* nickName;

@@ -23,6 +23,7 @@ typedef void (^ErrorBlock)(NSError * _Nonnull error);
 #import "LNManager+UserLoginModel/LNManager+UserLoginModel.h"
 #import "LNManager+HomeModel/LNManager+HomeModel.h"
 #import "LNManager+EditUserInfoModel/LNManager+EditUserInfoModel.h"
+#import "LNManager+UpDataModel/LNManager+UpDataModel.h"
 // 引入第三方库
 #import "AFNetworking.h"
 

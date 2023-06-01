@@ -44,6 +44,11 @@
     [self getSearchModelFormURL];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.searchTextField resignFirstResponder];
+    return YES;
+}
+
 #pragma mark - 网络请求
 - (void) getSearchModelFormURL {
     dispatch_group_t group = dispatch_group_create();

@@ -41,8 +41,8 @@ extern NSString *const UserMainViewUserInfoTableViewCellSetting;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initNavSubViews];
-    [self initUserMainModel];
     [self initUserMainView];
+    [self initUserMainModel];
     
     [self addNotification];
 }
@@ -55,61 +55,66 @@ extern NSString *const UserMainViewUserInfoTableViewCellSetting;
 - (void) initUserMainModel {
     self.userMainModel = [[UserMainModel alloc] init];
     
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_enter(group);
     if (_userMainModel.nickName) {
         [[LNManager shareLNManager] getUserInfoWithNickName:_userMainModel.nickName AndToken:_userMainModel.token UserInfoModelBlock:^(UserInfoModel * _Nonnull userInfoModel) {
             
             self.userMainModel.userInfoModel = userInfoModel;
 
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if (self.userMainView) {
-                    self.userMainView.userInfoDataModel = self.userMainModel.userInfoModel.data;
-                }
-                [self.userMainView reloadTableView];
-            });
+            dispatch_group_leave(group);
         } ErrorBlack:^(NSError * _Nonnull error) {
             NSLog(@"getUserInfoWithNickName error");
+            dispatch_group_leave(group);
         }];
     }
     
-    NSMutableArray* array2 = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 6; i++) {
-        UserContentDataModel* data = [[UserContentDataModel alloc] init];
-        if (i == 0) {
-            data.userName = @"铲屎官";
-            data.title = @"是会跳伞的兔子嘞";
-            data.mainImage = @"WechatIMG1497";
-            data.userIcon = @"userIcon.jpeg";
-        } else if (i == 1) {
-            data.userName = @"铲屎官";
-            data.title = @"晒太阳的羊驼";
-            data.mainImage = @"WechatIMG1498";
-            data.userIcon = @"userIcon.jpeg";
-        } else if (i == 2) {
-            data.userName = @"铲屎官";
-            data.title = @"可爱可爱的荷兰猪";
-            data.mainImage = @"WechatIMG1499";
-            data.userIcon = @"userIcon.jpeg";
-        } else {
-            data.userName = @"铲屎官";
-            data.title = @"杯子里的刺猬";
-            data.mainImage = @"WechatIMG1500";
-            data.userIcon = @"userIcon.jpeg";
+    dispatch_group_notify(group, dispatch_queue_create(0, 0), ^{
+        if (self.userMainModel.userInfoModel.data != nil) {
+            NSMutableArray* array2 = [[NSMutableArray alloc] init];
+            for (int i = 0; i < 6; i++) {
+                UserContentDataModel* data = [[UserContentDataModel alloc] init];
+                if (i == 0) {
+                    data.userName = @"铲屎官";
+                    data.title = @"是会跳伞的兔子嘞";
+                    data.mainImage = @"WechatIMG1497";
+                    data.userIcon = @"userIcon.jpeg";
+                } else if (i == 1) {
+                    data.userName = @"铲屎官";
+                    data.title = @"晒太阳的羊驼";
+                    data.mainImage = @"WechatIMG1498";
+                    data.userIcon = @"userIcon.jpeg";
+                } else if (i == 2) {
+                    data.userName = @"铲屎官";
+                    data.title = @"可爱可爱的荷兰猪";
+                    data.mainImage = @"WechatIMG1499";
+                    data.userIcon = @"userIcon.jpeg";
+                } else {
+                    data.userName = @"铲屎官";
+                    data.title = @"杯子里的刺猬";
+                    data.mainImage = @"WechatIMG1500";
+                    data.userIcon = @"userIcon.jpeg";
+                }
+                
+                [array2 addObject:data];
+            }
+            self.userMainModel.userPetFileContentModel.data = (NSArray<UserContentDataModel>*)array2;
+            self.userMainModel.userCollectContentModel.data = (NSArray<UserContentDataModel>*)array2;
+            self.userMainModel.userLikeContentModel.data = (NSArray<UserContentDataModel>*)array2;
         }
-        
-        [array2 addObject:data];
-    }
-    self.userMainModel.userPetFileContentModel.data = (NSArray<UserContentDataModel>*)array2;
-    self.userMainModel.userCollectContentModel.data = (NSArray<UserContentDataModel>*)array2;
-    self.userMainModel.userLikeContentModel.data = (NSArray<UserContentDataModel>*)array2;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.userMainView.userInfoDataModel = self.userMainModel.userInfoModel.data;
+            self.userMainView.userPetFileContentDataArray = (NSArray*)self.userMainModel.userPetFileContentModel.data;
+            self.userMainView.userCollectContentDataArray = (NSArray*)self.userMainModel.userPetFileContentModel.data;
+            self.userMainView.userLikeContentDataArray = (NSArray*)self.userMainModel.userPetFileContentModel.data;
+            [self.userMainView reloadTableView];
+        });
+    });
 }
 
 // 初始化视图
 - (void) initUserMainView {
     self.userMainView = [[UserMainView alloc] initWithFrame:self.view.bounds];
-    self.userMainView.userInfoDataModel = self.userMainModel.userInfoModel.data;
-    self.userMainView.userPetFileContentDataArray = (NSArray*)self.userMainModel.userPetFileContentModel.data;
-    self.userMainView.userCollectContentDataArray = (NSArray*)self.userMainModel.userPetFileContentModel.data;
-    self.userMainView.userLikeContentDataArray = (NSArray*)self.userMainModel.userPetFileContentModel.data;    
     
     [self.view addSubview:_userMainView];
 }
@@ -207,21 +212,62 @@ extern NSString *const UserMainViewUserInfoTableViewCellSetting;
     _userMainModel.nickName = notification.userInfo[@"nickName"];
     _userMainModel.token = notification.userInfo[@"token"];
     
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_enter(group);
     [[LNManager shareLNManager] getUserInfoWithNickName:_userMainModel.nickName AndToken:_userMainModel.token UserInfoModelBlock:^(UserInfoModel * _Nonnull userInfoModel) {
-        
         self.userMainModel.userInfoModel = userInfoModel;
         
         self.userMainView.userInfoDataModel = userInfoModel.data;
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.userMainView reloadTableView];
-            
-            [self.userMainModel saveUserInfoNickName:self.userMainModel.nickName token:self.userMainModel.token icon:userInfoModel.data.icon];
-        });
-        
+        dispatch_group_leave(group);
     } ErrorBlack:^(NSError * _Nonnull error) {
         NSLog(@"getUserInfoWithNickName error");
+        dispatch_group_leave(group);
     }];
+    
+    dispatch_group_notify(group, dispatch_queue_create(0, 0), ^{
+        if (self.userMainModel.userInfoModel != nil) {
+            NSMutableArray* array2 = [[NSMutableArray alloc] init];
+            for (int i = 0; i < 6; i++) {
+                UserContentDataModel* data = [[UserContentDataModel alloc] init];
+                if (i == 0) {
+                    data.userName = @"铲屎官";
+                    data.title = @"是会跳伞的兔子嘞";
+                    data.mainImage = @"WechatIMG1497";
+                    data.userIcon = @"userIcon.jpeg";
+                } else if (i == 1) {
+                    data.userName = @"铲屎官";
+                    data.title = @"晒太阳的羊驼";
+                    data.mainImage = @"WechatIMG1498";
+                    data.userIcon = @"userIcon.jpeg";
+                } else if (i == 2) {
+                    data.userName = @"铲屎官";
+                    data.title = @"可爱可爱的荷兰猪";
+                    data.mainImage = @"WechatIMG1499";
+                    data.userIcon = @"userIcon.jpeg";
+                } else {
+                    data.userName = @"铲屎官";
+                    data.title = @"杯子里的刺猬";
+                    data.mainImage = @"WechatIMG1500";
+                    data.userIcon = @"userIcon.jpeg";
+                }
+                
+                [array2 addObject:data];
+            }
+            self.userMainModel.userPetFileContentModel.data = (NSArray<UserContentDataModel>*)array2;
+            self.userMainModel.userCollectContentModel.data = (NSArray<UserContentDataModel>*)array2;
+            self.userMainModel.userLikeContentModel.data = (NSArray<UserContentDataModel>*)array2;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.userMainView.userPetFileContentDataArray = (NSArray*)self.userMainModel.userPetFileContentModel.data;
+            self.userMainView.userCollectContentDataArray = (NSArray*)self.userMainModel.userPetFileContentModel.data;
+            self.userMainView.userLikeContentDataArray = (NSArray*)self.userMainModel.userPetFileContentModel.data;
+            [self.userMainView reloadTableView];
+            
+            [self.userMainModel saveUserInfoNickName:self.userMainModel.nickName token:self.userMainModel.token icon:self.userMainModel.userInfoModel.data.icon];
+        });
+    });
 }
 
 - (void) exitLogout {

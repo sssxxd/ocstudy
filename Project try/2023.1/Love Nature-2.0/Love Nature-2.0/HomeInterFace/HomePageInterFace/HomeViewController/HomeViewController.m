@@ -16,13 +16,22 @@
 // 引入视图控制器
 #import "SearchViewController.h"
 #import "ClassifictaionViewController.h"
+#import "KnowledBaseViewController.h"
+#import "SweepViewController.h"
+#import "TitleViewController.h"
+
 
 // 引入视图类和模型类
 #import "HomeView.h"
 #import "HomeModel.h"
+#import "TitleView.h"
 
 // 引入工具类
 #import "LNManager.h"
+
+// 设置全局变量
+extern NSString *const HomeViewKnoledgeBaseButtonPressed;
+extern NSString *const HomeViewTitleCellPressed;
 
 @interface HomeViewController ()
 <UITextFieldDelegate>
@@ -44,6 +53,14 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self initNavSubViews];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(konwledgeBaseOpen) name:HomeViewKnoledgeBaseButtonPressed object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openTitleCell:) name:HomeViewTitleCellPressed object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 // 初始化模组
@@ -99,6 +116,32 @@
     
     [self.view addSubview:self.homeView];
 }
+
+#pragma mark - 文章详情
+- (void)openTitleCell:(NSNotification *)notification {
+    NSNumber* num = notification.userInfo[@"value"];
+    NSInteger i = [num integerValue];
+    
+    TitleViewController* viewController = [[TitleViewController alloc] init];
+    viewController.dataModel = self.homeModel.homeShareModel.data[i];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark - 扫描
+- (void)SweepOpen {
+    SweepViewController* viewController = [[SweepViewController alloc] init];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark - 知识库
+- (void)konwledgeBaseOpen {
+    KnowledBaseViewController* viewController = [[KnowledBaseViewController alloc] init];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 #pragma mark - 分类
 - (void) createClassViewController {
     ClassifictaionViewController* viewController = [[ClassifictaionViewController alloc] init];
@@ -127,6 +170,7 @@
 }
 
 - (void) createSearchViewController {
+    [self.searchTextField resignFirstResponder];
     SearchViewController* viewController = [[SearchViewController alloc] init];
     
     [self.navigationController pushViewController:viewController animated:YES];
@@ -164,7 +208,7 @@
 
 - (UIBarButtonItem*) cameraItem {
     if (_cameraItem == nil) {
-        self.cameraItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"camera.png"] style:UIBarButtonItemStyleDone target:self action:nil];
+        self.cameraItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"camera.png"] style:UIBarButtonItemStyleDone target:self action:@selector(SweepOpen)];
         
         _cameraItem.tintColor = [UIColor blackColor];
     }

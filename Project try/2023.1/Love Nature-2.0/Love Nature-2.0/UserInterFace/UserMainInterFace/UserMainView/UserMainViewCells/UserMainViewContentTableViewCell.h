@@ -18,6 +18,8 @@ extern NSString *const UserMainViewContentTableViewCellMainTableCanScroll;
 @property (nonatomic, copy) NSArray* userPetFileContentDataArray;
 @property (nonatomic, copy) NSArray* userCollectContentDataArray;
 @property (nonatomic, copy) NSArray* userLikeContentDataArray;
+
+- (void) reloadSubViews;
 @end
 
 NS_ASSUME_NONNULL_END
