@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-//extern void _objc_autoreleasePoolPrint(void);
+extern void _objc_autoreleasePoolPrint(void);
 
 //@interface MyClass : NSObject
 //@property (nonatomic, weak) id obj;
@@ -18,6 +18,20 @@
 //}
 //
 //@end
+
+@interface TestPerson : NSObject {
+    // 成员变量
+    // @public
+    NSString *_age; // 4个字节
+}
+@property (nonatomic, copy) NSString *name; // 属性
+
+@end
+
+@implementation TestPerson
+
+@end
+
 
 int main(int argc, const char * argv[]) {
 //    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -74,5 +88,28 @@ int main(int argc, const char * argv[]) {
 //        objs[1] = [NSMutableArray array];
 //    }
     
-    id __strong obj = [[NSObject alloc] init];
+//    id __strong obj = [[NSObject alloc] init];
+//
+//    {
+//        id __weak obj = [[NSObject alloc] init];
+//    }
+//    @autoreleasepool {
+//        id obj = [[NSObject alloc] init];
+//
+//        {
+//            id __weak o = obj;
+//    //        id __strong tmp = o;
+//            id __autoreleasing tmp = o;
+//            NSLog(@"%@", o);
+//            NSLog(@"%@", o);
+//            NSLog(@"%@", o);
+////            NSLog(@"%@", o);
+////            NSLog(@"%@", o);
+//            _objc_autoreleasePoolPrint();
+//        }
+//    }
+    
+//    @autoreleasepool {
+//        id __autoreleasing obj = [[NSObject alloc] init];
+//    }
 }

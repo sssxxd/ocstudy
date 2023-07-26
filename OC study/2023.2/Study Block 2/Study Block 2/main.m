@@ -53,18 +53,18 @@
 //    return 0;
 //}
 
-typedef int (^blk_t)(int);
-
-blk_t func(int rate)
-{
-    return ^(int count){return rate * count;};
-}
-
-int main(){
-    blk_t blk_t1 = func(2);
-    NSLog(@"%d", blk_t1(2));
-    return 0;
-}
+//typedef int (^blk_t)(int);
+//
+//blk_t func(int rate)
+//{
+//    return ^(int count){return rate * count;};
+//}
+//
+//int main(){
+//    blk_t blk_t1 = func(2);
+//    NSLog(@"%d", blk_t1(2));
+//    return 0;
+//}
 
 
 
@@ -145,3 +145,21 @@ int main(){
 //        NSLog(@"%p-%@-%@", str, str, str.class);
 //    }
 //}
+
+typedef void (^blk_t)(id obk);
+
+int main(){
+    @autoreleasepool {
+        blk_t blk;
+        {
+            id array = [[NSMutableArray alloc] init];
+            blk = ^(id obj) {
+                [array addObject:obj];
+                NSLog(@"array count = %ld", [array count]);
+                };
+        }
+        blk([[NSObject alloc] init]);
+        blk([[NSObject alloc] init]);
+        blk([[NSObject alloc] init]);
+    }
+}
