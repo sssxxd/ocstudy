@@ -117,6 +117,7 @@
     while ([cell.contentView.subviews lastObject] != nil) {
         [(UIView*)[cell.contentView.subviews lastObject] removeFromSuperview];
     }
+    
     cell.textLabel.text = _cityArray[indexPath.row];
     cell.textLabel.font = [UIFont systemFontOfSize:20];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
