@@ -42,7 +42,7 @@
 //    [self readFromUserDefaults];
 //    [self writeUseNSKeyedArchiver];
 //    [self readUseNSKeyedArchiver];
-    [self setDataToPlist];
+//    [self setDataToPlist];
     [self getDataFromPlist];
 }
 
@@ -155,6 +155,7 @@
     NSLog(@"%@", plist);
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:plist];
     NSLog(@"%@", dict);
+    NSLog(@"%@", (NSString *)dict[@"name"]);
 }
 
 @end
