@@ -15,8 +15,8 @@
 //        self.student1 = [[SXStudent alloc] init];
 //        self.student2 = [[SXStudent alloc] init];
 //
-////        self.student1.age = 1;
-////        self.student2.age = 2;
+//        self.student1.age = 1;
+//        self.student2.age = 2;
 //
 ////        NSLog(@"添加监听之前 - p1 = %p, p2 = %p", [self.student1 methodForSelector:@selector(setAge:)], [self.student2 methodForSelector:@selector(setAge:)]);
 //
@@ -29,11 +29,11 @@
 //    return self;
 //}
 //
-//- (void)demo {
-//
-//    self.student1.age = 20;
-////    self.student2.age = 30;
-//}
+- (void)demo {
+
+    self.student1.age = 20;
+//    self.student2.age = 30;
+}
 //
 //- (void)demo2 {
 //    [self printMethods:object_getClass(self.student1)];
@@ -91,11 +91,13 @@
         [self.student1 addObserver:self forKeyPath:@"age" options:option context:nil];
         
 //        [self.student1 setValue:@20 forKey:@"age"];
+//        self.student1.age = 10;
+//        NSLog(@"%d", self.student1->_isAge);
 //
 //        NSLog(@"-----");
         
-        [self.student1 willChangeValueForKey:@"age"];
-        [self.student1 didChangeValueForKey:@"age"];
+//        [self.student1 willChangeValueForKey:@"age"];
+//        [self.student1 didChangeValueForKey:@"age"];
         
     }
     return self;

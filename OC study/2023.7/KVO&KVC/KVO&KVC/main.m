@@ -11,7 +11,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         SXTeacher *teacher = [[SXTeacher alloc] init];
-//        [teacher demo];
+        [teacher demo];
 //        [teacher demo2];
 //        [teacher demo3];
 //        [teacher demoSetValueForKeyAndValueForKey];

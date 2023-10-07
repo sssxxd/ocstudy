@@ -31,5 +31,10 @@
 //    return self;
 //}
 
+- (void)setAge:(NSInteger)aage {
+//    [self didChangeValueForKey:@"age"];
+    _age = aage;
+    
+}
 
 @end

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "AA430A3F-FC93-45FB-9EF0-2C9EEF87A580"
-   type = "0"
+   uuid = "EFC85C0D-7EA4-4F5F-9A08-377379A25147"
+   type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
-            uuid = "9EDEC6BF-3627-4D84-938E-498784DEAB49"
+            uuid = "953A0AEF-4E55-4495-BC16-19766D13C64A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            breakpointStackSelectionBehavior = "1"
-            scope = "0"
-            stopOnStyle = "0">
+            symbolName = "-viewDidLoad 45"
+            moduleName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
